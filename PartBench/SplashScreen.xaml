@@ -1,0 +1,15 @@
+﻿<Page
+    x:Class="PartBench.SplashScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PartBench"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="720" Width="1280">
+
+    <Grid>
+        <MediaElement HorizontalAlignment="Center" Height="720" VerticalAlignment="Center" Width="1313" Source="Assets/logo.mp4" Volume="0" IsLooping="True" Opacity=".7"/>
+        <Image x:Name="_2ndlogo" Source="Assets/PartBenchLogoV1.png" Margin="942,608,44,44" Opacity="0"/>
+    </Grid>
+</Page>
