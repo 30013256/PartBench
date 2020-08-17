@@ -68,5 +68,10 @@ namespace PartBench
             ContentContainer.Margin = margin;
         }
         #endregion
+
+        private void btnEditBuild_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BuildEditorPage));
+        }
     }
 }
