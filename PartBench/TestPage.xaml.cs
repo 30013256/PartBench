@@ -27,7 +27,7 @@ namespace PartBench
             this.InitializeComponent();
 
             //Sets Dragable Area
-            Window.Current.SetTitleBar(AppTitleBar);
+            Window.Current.SetTitleBar(AppTitleBar);            
         }
 
         #region Nav Items
@@ -69,5 +69,10 @@ namespace PartBench
             ContentContainer.Margin = margin;
         }
         #endregion
+
+        private void NavItemBuildGuide_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BuildGuidePage));
+        }
     }
 }

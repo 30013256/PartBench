@@ -27,6 +27,7 @@
                 <muxc:NavigationViewItemHeader Content="Main Pages"/>
                 <muxc:NavigationViewItem x:Name="NavItemHome" Tag="Home" Icon="Home" Content="Home" Tapped="NavItemHome_Tapped"/>
                 <muxc:NavigationViewItem x:Name="NavItemBuilds" Tag="Home" Icon="Repair" Content="Sytem Builds" Tapped="NavItemBuilds_Tapped"/>
+                <muxc:NavigationViewItem x:Name="NavItemBuildGuide" Tag="Home" Icon="Keyboard" Content="System Build Guides" Tapped="NavItemBuildGuide_Tapped"/>
                 <muxc:NavigationViewItemSeparator/>
                 <muxc:NavigationViewItemHeader Content="Test Pages"/>
                 <muxc:NavigationViewItem x:Name="NavItemTestPage" Tag="TestPage" Icon="AllApps" Content="TestPage" Tapped="NavItemTestPage_Tapped"/>

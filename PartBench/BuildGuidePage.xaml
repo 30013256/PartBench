@@ -54,7 +54,28 @@
                     <RelativePanel Background="Aqua" Height="350" Width="250" MaxHeight="350" MaxWidth="250">
                         <Button Background="Black" Margin="0,275,0,0" Height="75" Width="250" CornerRadius="0" Content="Click me" Click="Btn_Click1"></Button>
                     </RelativePanel>
-                    
+                    <RelativePanel HorizontalAlignment="Center" Background="Aqua" Height="350" Width="250" MaxHeight="350" MaxWidth="250">
+                        <Button Background="Black" Margin="0,275,0,0" Height="75" Width="250" CornerRadius="0" Content="Click me" Click="Btn_Click2"></Button>
+                    </RelativePanel>
+                    <RelativePanel Background="Aqua" HorizontalAlignment="Right" Height="350" Width="250" MaxHeight="350" MaxWidth="250">
+                        <Button Background="Black" Margin="0,275,0,0" Height="75" Width="250" CornerRadius="0" Content="Click me" Click="Btn_Click3"></Button>
+                    </RelativePanel>
+                    <RelativePanel Background="Aqua" HorizontalAlignment="Right" Height="350" Width="250" MaxHeight="350" MaxWidth="250">
+                        <Button Background="Black" Margin="0,275,0,0" Height="75" Width="250" CornerRadius="0" Content="Click me" Click="Btn_Click4"></Button>
+                    </RelativePanel>
+                    <RelativePanel Background="Aqua" HorizontalAlignment="Right" Height="350" Width="250" MaxHeight="350" MaxWidth="250">
+                        <Button Background="Black" Margin="0,275,0,0" Height="75" Width="250" CornerRadius="0" Content="Click me" Click="Btn_Click5"></Button>
+                    </RelativePanel>
+                    <RelativePanel Background="Aqua" HorizontalAlignment="Right" Height="350" Width="250" MaxHeight="350" MaxWidth="250">
+                        <Button Background="Black" Margin="0,275,0,0" Height="75" Width="250" CornerRadius="0" Content="Click me" Click="Btn_Click6"></Button>
+                    </RelativePanel>
+                    <RelativePanel Background="Aqua" HorizontalAlignment="Right" Height="350" Width="250" MaxHeight="350" MaxWidth="250">
+                        <Button Background="Black" Margin="0,275,0,0" Height="75" Width="250" CornerRadius="0" Content="Click me" Click="Btn_Click7"></Button>
+                    </RelativePanel>
+                    <RelativePanel Background="Aqua" HorizontalAlignment="Right" Height="350" Width="250" MaxHeight="350" MaxWidth="250">
+                        <Button Background="Black" Margin="0,275,0,0" Height="75" Width="250" CornerRadius="0" Content="Click me" Click="Btn_Click8"></Button>
+                    </RelativePanel>
+
                 </GridView>
             </ScrollViewer>
 

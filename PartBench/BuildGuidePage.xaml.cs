@@ -19,16 +19,16 @@ using Windows.UI.Xaml.Navigation;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace PartBench
-{    
+{
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class BuildGuidePage : Page
-    {        
+    {
         public BuildGuidePage()
-        {            
+        {
             this.InitializeComponent();
-            Window.Current.SetTitleBar(AppTitleBar);                      
+            Window.Current.SetTitleBar(AppTitleBar);
         }
 
         #region Nav Items
@@ -69,16 +69,53 @@ namespace PartBench
             margin.Left = 330;
             ContentContainer.Margin = margin;
         }
-        #endregion         
-       
+        #endregion
+
         private void NavItemBuildGuide_Tapped(object sender, TappedRoutedEventArgs e)
         {
 
         }
 
+        #region Page Navigation for Build Guides
         private void Btn_Click1(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
         }
-    }  
+
+        private void Btn_Click2(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void Btn_Click3(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void Btn_Click4(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void Btn_Click5(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void Btn_Click6(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void Btn_Click7(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void Btn_Click8(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+        #endregion
+    }
 }
