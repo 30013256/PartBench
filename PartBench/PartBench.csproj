@@ -146,6 +146,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\logo.mp4" />
+    <Content Include="Assets\sample.png" />
+    <Content Include="Assets\sample2.png" />
+    <Content Include="Assets\sample3.png" />
+    <Content Include="Assets\sample4.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\PartBenchLogoV1.png" />
     <Content Include="Assets\Square150x150Logo.scale-200.png" />

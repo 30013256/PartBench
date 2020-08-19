@@ -69,6 +69,11 @@ namespace PartBench
         {
             this.Frame.Navigate(typeof(BuildsPage));
         }
+
+        private void NavItemBuildGuidePage_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BuildGuidePage));
+        }
         #endregion
 
         #region Resize Content area on pane state

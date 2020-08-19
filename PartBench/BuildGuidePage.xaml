@@ -7,7 +7,6 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
-    xmlns:controls="using:Marduk.Controls"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.Resources>
@@ -50,33 +49,25 @@
             <!--All content inside is scrollable-->
             <ScrollViewer Margin="0,30,-20,0">
                 <!--List Of builds-->
-                <GridView>
-                    <RelativePanel Background="Aqua" Height="350" Width="250" MaxHeight="350" MaxWidth="250">
-                        <Button Background="Black" Margin="0,275,0,0" Height="75" Width="250" CornerRadius="0" Content="Click me" Click="Btn_Click1"></Button>
+                <VariableSizedWrapGrid Orientation="Horizontal">
+                    <RelativePanel Height="300" Width="250" Background="Gray" Margin="10,10">
+                        <Image Source="Assets/sample.png" Height="170" Width="170" Margin="40,20,0,0"></Image>
+                        <Button Height="70" Width="140" Content="View Build Guide" Margin="100,220,0,0"/>
                     </RelativePanel>
-                    <RelativePanel HorizontalAlignment="Center" Background="Aqua" Height="350" Width="250" MaxHeight="350" MaxWidth="250">
-                        <Button Background="Black" Margin="0,275,0,0" Height="75" Width="250" CornerRadius="0" Content="Click me" Click="Btn_Click2"></Button>
+                    <RelativePanel Height="300" Width="250" Background="Gray">
+                        <Image Source="Assets/sample2.png" Height="170" Width="170" Margin="40,20,0,0"></Image>
+                        <Button Height="70" Width="140" Content="View Build Guide" Margin="100,220,0,0"/>
                     </RelativePanel>
-                    <RelativePanel Background="Aqua" HorizontalAlignment="Right" Height="350" Width="250" MaxHeight="350" MaxWidth="250">
-                        <Button Background="Black" Margin="0,275,0,0" Height="75" Width="250" CornerRadius="0" Content="Click me" Click="Btn_Click3"></Button>
+                    <RelativePanel Height="300" Width="250" Background="Gray">
+                        <Image Source="Assets/sample3.png" Height="170" Width="170" Margin="40,20,0,0"></Image>
+                        <Button Height="70" Width="140" Content="View Build Guide" Margin="100,220,0,0"/>
                     </RelativePanel>
-                    <RelativePanel Background="Aqua" HorizontalAlignment="Right" Height="350" Width="250" MaxHeight="350" MaxWidth="250">
-                        <Button Background="Black" Margin="0,275,0,0" Height="75" Width="250" CornerRadius="0" Content="Click me" Click="Btn_Click4"></Button>
+                    <RelativePanel Height="300" Width="250" Background="Gray">
+                        <Image Source="Assets/sample4.png" Height="170" Width="170" Margin="40,20,0,0"></Image>
+                        <Button Height="70" Width="140" Content="View Build Guide" Margin="100,220,0,0"/>
                     </RelativePanel>
-                    <RelativePanel Background="Aqua" HorizontalAlignment="Right" Height="350" Width="250" MaxHeight="350" MaxWidth="250">
-                        <Button Background="Black" Margin="0,275,0,0" Height="75" Width="250" CornerRadius="0" Content="Click me" Click="Btn_Click5"></Button>
-                    </RelativePanel>
-                    <RelativePanel Background="Aqua" HorizontalAlignment="Right" Height="350" Width="250" MaxHeight="350" MaxWidth="250">
-                        <Button Background="Black" Margin="0,275,0,0" Height="75" Width="250" CornerRadius="0" Content="Click me" Click="Btn_Click6"></Button>
-                    </RelativePanel>
-                    <RelativePanel Background="Aqua" HorizontalAlignment="Right" Height="350" Width="250" MaxHeight="350" MaxWidth="250">
-                        <Button Background="Black" Margin="0,275,0,0" Height="75" Width="250" CornerRadius="0" Content="Click me" Click="Btn_Click7"></Button>
-                    </RelativePanel>
-                    <RelativePanel Background="Aqua" HorizontalAlignment="Right" Height="350" Width="250" MaxHeight="350" MaxWidth="250">
-                        <Button Background="Black" Margin="0,275,0,0" Height="75" Width="250" CornerRadius="0" Content="Click me" Click="Btn_Click8"></Button>
-                    </RelativePanel>
-
-                </GridView>
+                    
+                </VariableSizedWrapGrid>
             </ScrollViewer>
 
             <!--Grid adds fade out to the content at the botton of content area-->
