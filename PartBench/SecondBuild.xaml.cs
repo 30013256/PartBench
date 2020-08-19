@@ -1,5 +1,4 @@
-﻿using Marduk.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -23,9 +22,9 @@ namespace PartBench
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class BuildGuidePage : Page
+    public sealed partial class SecondBuild : Page
     {
-        public BuildGuidePage()
+        public SecondBuild()
         {
             this.InitializeComponent();
             Window.Current.SetTitleBar(AppTitleBar);
@@ -52,11 +51,11 @@ namespace PartBench
         private void NavItemBuilds_Tapped(object sender, TappedRoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(BuildsPage));
-        } 
-        
+        }
+
         private void NavItemBuildGuide_Tapped(object sender, TappedRoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(BuildGuidePage));
         }
         #endregion
 
@@ -73,30 +72,6 @@ namespace PartBench
             Thickness margin = ContentContainer.Margin;
             margin.Left = 330;
             ContentContainer.Margin = margin;
-        }
-        #endregion
-
-       
-
-        #region Page Navigation for Build Guides
-        private void Btn_Click1(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(FirstBuild));
-        }
-
-        private void Btn_Click2(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(SecondBuild));
-        }
-
-        private void Btn_Click3(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(ThirdBuild));
-        }
-
-        private void Btn_Click4(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(FourthBuild));
         }
         #endregion
     }

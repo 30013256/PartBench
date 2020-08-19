@@ -52,19 +52,19 @@
                 <VariableSizedWrapGrid Orientation="Horizontal">
                     <RelativePanel Height="300" Width="250" Background="Gray" Margin="10,10">
                         <Image Source="Assets/sample.png" Height="170" Width="170" Margin="40,20,0,0"></Image>
-                        <Button Height="70" Width="140" Content="View Build Guide" Margin="100,220,0,0"/>
+                        <Button Height="70" Width="140" Content="View Build Guide" Margin="100,220,0,0" Click="Btn_Click1"/>
                     </RelativePanel>
                     <RelativePanel Height="300" Width="250" Background="Gray">
                         <Image Source="Assets/sample2.png" Height="170" Width="170" Margin="40,20,0,0"></Image>
-                        <Button Height="70" Width="140" Content="View Build Guide" Margin="100,220,0,0"/>
+                        <Button Height="70" Width="140" Content="View Build Guide" Margin="100,220,0,0" Click="Btn_Click2"/>
                     </RelativePanel>
                     <RelativePanel Height="300" Width="250" Background="Gray">
                         <Image Source="Assets/sample3.png" Height="170" Width="170" Margin="40,20,0,0"></Image>
-                        <Button Height="70" Width="140" Content="View Build Guide" Margin="100,220,0,0"/>
+                        <Button Height="70" Width="140" Content="View Build Guide" Margin="100,220,0,0" Click="Btn_Click3"/>
                     </RelativePanel>
                     <RelativePanel Height="300" Width="250" Background="Gray">
                         <Image Source="Assets/sample4.png" Height="170" Width="170" Margin="40,20,0,0"></Image>
-                        <Button Height="70" Width="140" Content="View Build Guide" Margin="100,220,0,0"/>
+                        <Button Height="70" Width="140" Content="View Build Guide" Margin="100,220,0,0" Click="Btn_Click4"/>
                     </RelativePanel>
                     
                 </VariableSizedWrapGrid>
