@@ -47,42 +47,30 @@
 
         <!--Content Area - Margin.Left Expaned View 330 Colapsed View 90-->
         <Grid Grid.Row="1" x:Name="ContentContainer"  Margin="330,50,20,20">
+            <Image Source="Assets/sample3.png" MaxHeight="500" MaxWidth="450" Height="300" Width="270" HorizontalAlignment="Right" VerticalAlignment="Top"/>
             <ScrollViewer>
-                <TextBlock TextWrapping="Wrap" Width="748">                    
-                <Run FontSize="24">An Introduction</Run>                    
-                    <LineBreak></LineBreak>
-                    <LineBreak></LineBreak>
-                    <LineBreak></LineBreak><Run FontSize="22">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Run>
-                    <LineBreak></LineBreak>
-                    <LineBreak></LineBreak>
-                    <LineBreak></LineBreak>
-                    <LineBreak></LineBreak><Run FontSize="24">Step One</Run>
-                    <LineBreak></LineBreak><Run FontSize="22">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</Run>
-                    <LineBreak></LineBreak>
-                    <LineBreak></LineBreak>
-                    <LineBreak></LineBreak>
-                    <LineBreak></LineBreak>
-                    <LineBreak></LineBreak> 
-                    <LineBreak></LineBreak><Run FontSize="24">Step Two</Run>
-                    <LineBreak></LineBreak><Run FontSize="22">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</Run>
-                    <LineBreak></LineBreak>
-                    <LineBreak></LineBreak>
-                    <LineBreak></LineBreak>
-                    <LineBreak></LineBreak>
-                    <LineBreak></LineBreak>
-                    <LineBreak></LineBreak><Run FontSize="24">Step Three</Run>
-                    <LineBreak></LineBreak><Run FontSize="22">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</Run>
-                    <LineBreak></LineBreak>
-                    <LineBreak></LineBreak><Run FontSize="24">Continuation</Run>
-                </TextBlock>
+                <VariableSizedWrapGrid Margin="0,0,300,0">
+                    <TextBlock TextWrapping="Wrap" Margin="0,0,0,30">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="0,0,0,30">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="0,0,0,30">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="0,0,0,30">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="0,0,0,30">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="0,0,0,30">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </TextBlock>
+                </VariableSizedWrapGrid>
             </ScrollViewer>
-            <Image Source="Assets/sample3.png" Height="170" Width="170" Margin="760,0,0,439"/>
         </Grid>
     </Grid>
 </Page>

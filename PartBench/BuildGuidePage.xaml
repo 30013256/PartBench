@@ -12,6 +12,8 @@
     <Page.Resources>
         <Thickness x:Key="NavigationViewHeaderMargin">50,50</Thickness>
     </Page.Resources>
+    
+    
 
     <Grid>
         <!--Rows Title Bar | Everything Else-->
@@ -21,7 +23,7 @@
         </Grid.RowDefinitions>
 
         <!--Nav Bar | Left-->
-        <muxc:NavigationView CompactModeThresholdWidth="0" Header="Build Guide Page Header" Background="#3d3d3d" x:Name="NavView" Grid.RowSpan="2" IsTitleBarAutoPaddingEnabled="False" IsBackEnabled="True" BackRequested="NavView_BackRequested" OpenPaneLength="280" PaneClosing="NavView_PaneClosing" PaneOpening="NavView_PaneOpening">
+        <muxc:NavigationView CompactModeThresholdWidth="0" Header="Build Guide Page Header" Background="#3d3d3d" x:Name="NavView" Grid.RowSpan="2" IsTitleBarAutoPaddingEnabled="False" IsBackEnabled="True" BackRequested="NavView_BackRequested" OpenPaneLength="280" PaneClosing="NavView_PaneClosing" PaneOpening="NavView_PaneOpening" RequestedTheme="Dark">
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItemHeader Content="Main Pages"/>
                 <muxc:NavigationViewItem x:Name="NavItemHome" Tag="Home" Icon="Home" Content="Home" Tapped="NavItemHome_Tapped"/>
@@ -50,23 +52,31 @@
             <ScrollViewer Margin="0,30,-20,0">
                 <!--List Of builds-->
                 <VariableSizedWrapGrid Orientation="Horizontal">
-                    <RelativePanel Height="300" Width="250" Background="Gray" Margin="10,10">
-                        <Image Source="Assets/sample.png" Height="170" Width="170" Margin="40,20,0,0"></Image>
-                        <Button Height="70" Width="140" Content="View Build Guide" Margin="100,220,0,0" Click="Btn_Click1"/>
-                    </RelativePanel>
-                    <RelativePanel Height="300" Width="250" Background="Gray">
-                        <Image Source="Assets/sample2.png" Height="170" Width="170" Margin="40,20,0,0"></Image>
-                        <Button Height="70" Width="140" Content="View Build Guide" Margin="100,220,0,0" Click="Btn_Click2"/>
-                    </RelativePanel>
-                    <RelativePanel Height="300" Width="250" Background="Gray">
-                        <Image Source="Assets/sample3.png" Height="170" Width="170" Margin="40,20,0,0"></Image>
-                        <Button Height="70" Width="140" Content="View Build Guide" Margin="100,220,0,0" Click="Btn_Click3"/>
-                    </RelativePanel>
-                    <RelativePanel Height="300" Width="250" Background="Gray">
-                        <Image Source="Assets/sample4.png" Height="170" Width="170" Margin="40,20,0,0"></Image>
-                        <Button Height="70" Width="140" Content="View Build Guide" Margin="100,220,0,0" Click="Btn_Click4"/>
-                    </RelativePanel>
-                    
+                    <Button Height="300" Width="250" Background="#e4e4e4" Padding="0" Click="Btn_Click1" Margin="30">
+                        <Grid Height="300" Width="250">
+                            <Image Source="Assets/sample.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,20,0,0"></Image>
+                            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,45" FontWeight="Bold" >Budget AMD Build Guide</TextBlock>
+                        </Grid>
+                    </Button>
+                    <Button Height="300" Width="250" Background="#e4e4e4" Padding="0" Click="Btn_Click2" Margin="30">
+                        <Grid Height="300" Width="250">
+                            <Image Source="Assets/sample2.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,20,0,0"></Image>
+                            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,45" FontWeight="Bold" >Budget Intel Build Guide</TextBlock>
+                        </Grid>
+                    </Button>
+                    <Button Height="300" Width="250" Background="#e4e4e4" Padding="0" Click="Btn_Click3" Margin="30">
+                        <Grid Height="300" Width="250">
+                            <Image Source="Assets/sample3.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,20,0,0"></Image>
+                            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" FontWeight="Bold" >High-End Intel Build Guide</TextBlock>
+                        </Grid>
+                    </Button>
+                    <Button Height="300" Width="250" Background="#e4e4e4" Padding="0" Click="Btn_Click4" Margin="30">
+                        <Grid Height="300" Width="250">
+                            <Image Source="Assets/sample4.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,20,0,0"></Image>
+                            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" FontWeight="Bold" >High-End AMD Build Guide</TextBlock>
+                        </Grid>
+                    </Button>
+
                 </VariableSizedWrapGrid>
             </ScrollViewer>
 
