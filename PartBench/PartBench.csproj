@@ -158,6 +158,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\logo.mp4" />
+    <Content Include="Assets\PBLogo.png" />
     <Content Include="Assets\sample.png" />
     <Content Include="Assets\sample2.png" />
     <Content Include="Assets\sample3.png" />

@@ -42,7 +42,7 @@
                 <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
             </Grid.ColumnDefinitions>
             <!--Logo-->
-            <Image Grid.Column="1" Source="Assets/PartBenchLogoV1.png" Height="25" Margin="0,8" HorizontalAlignment="Left"/>
+            <Image Grid.Column="1" Source="/Assets/PBLogo.png" Height="25" Margin="0,8" HorizontalAlignment="Left"/>
         </Grid>
 
         <!--Content Area - Margin.Left Expaned View 330 Colapsed View 90-->

@@ -52,11 +52,11 @@ namespace PartBench
         private void NavItemBuilds_Tapped(object sender, TappedRoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(BuildsPage));
-        } 
-        
-        private void NavItemBuildGuide_Tapped(object sender, TappedRoutedEventArgs e)
-        {
+        }
 
+        private void NavItemBuildGuidePage_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BuildGuidePage));
         }
         #endregion
 

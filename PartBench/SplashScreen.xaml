@@ -10,6 +10,6 @@
 
     <Grid>
         <MediaElement HorizontalAlignment="Center" Height="720" VerticalAlignment="Center" Width="1313" Source="Assets/logo.mp4" Volume="0" IsLooping="True" Opacity=".7"/>
-        <Image x:Name="_2ndlogo" Source="Assets/PartBenchLogoV1.png" Margin="942,608,44,44" Opacity="0"/>
+        <Image x:Name="_2ndlogo" Source="/Assets/logo2.png" Margin="942,608,44,44" Opacity="1"/>
     </Grid>
 </Page>

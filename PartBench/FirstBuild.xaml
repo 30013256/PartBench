@@ -42,14 +42,14 @@
                 <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
             </Grid.ColumnDefinitions>
             <!--Logo-->
-            <Image Grid.Column="1" Source="Assets/PartBenchLogoV1.png" Height="25" Margin="0,8" HorizontalAlignment="Left"/>
+            <Image Grid.Column="1" Source="/Assets/PBLogo.png" Height="25" Margin="0,8" HorizontalAlignment="Left"/>
         </Grid>
 
         <!--Content Area - Margin.Left Expaned View 330 Colapsed View 90-->
         <Grid Grid.Row="1" x:Name="ContentContainer"  Margin="330,50,20,20">
             <Image Source="Assets/sample.png" MaxHeight="500" MaxWidth="450" Height="300" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <ScrollViewer>
-                <VariableSizedWrapGrid Margin="0,0,300,0">
+            <ScrollViewer Margin="0,0,-20,0">
+                <VariableSizedWrapGrid Margin="0,0,320,0">
                     <TextBlock TextWrapping="Wrap" Margin="0,0,0,30">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </TextBlock>

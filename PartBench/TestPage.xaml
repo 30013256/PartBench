@@ -22,12 +22,12 @@
         </Grid.RowDefinitions>
 
         <!--Nav Bar | Left-->
-        <muxc:NavigationView CompactModeThresholdWidth="0" Header="Test Page Header" Background="#3d3d3d" x:Name="NavView" Grid.RowSpan="2" IsTitleBarAutoPaddingEnabled="False" IsBackEnabled="True" BackRequested="NavView_BackRequested" OpenPaneLength="280" PaneClosing="NavView_PaneClosing" PaneOpening="NavView_PaneOpening">
+        <muxc:NavigationView CompactModeThresholdWidth="0" Header="Main Page Header" Background="#3d3d3d" x:Name="NavView" Grid.RowSpan="2" IsTitleBarAutoPaddingEnabled="False" IsBackEnabled="True" BackRequested="NavView_BackRequested" OpenPaneLength="280" PaneClosing="NavView_PaneClosing" PaneOpening="NavView_PaneOpening">
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItemHeader Content="Main Pages"/>
                 <muxc:NavigationViewItem x:Name="NavItemHome" Tag="Home" Icon="Home" Content="Home" Tapped="NavItemHome_Tapped"/>
                 <muxc:NavigationViewItem x:Name="NavItemBuilds" Tag="Home" Icon="Repair" Content="System Builds" Tapped="NavItemBuilds_Tapped"/>
-                <muxc:NavigationViewItem x:Name="NavItemBuildGuide" Tag="Home" Icon="Keyboard" Content="System Build Guides" Tapped="NavItemBuildGuide_Tapped"/>
+                <muxc:NavigationViewItem x:Name="NavItemBuildGuide" Tag="Home" Icon="Keyboard" Content="System Build Guides" Tapped="NavItemBuildGuidePage_Tapped"/>
                 <muxc:NavigationViewItemSeparator/>
                 <muxc:NavigationViewItemHeader Content="Test Pages"/>
                 <muxc:NavigationViewItem x:Name="NavItemTestPage" Tag="TestPage" Icon="AllApps" Content="TestPage" Tapped="NavItemTestPage_Tapped"/>
@@ -42,7 +42,7 @@
                 <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
             </Grid.ColumnDefinitions>
             <!--Logo-->
-            <Image Grid.Column="1" Source="Assets/PartBenchLogoV1.png" Height="25" Margin="0,8" HorizontalAlignment="Left"/>
+            <Image Grid.Column="1" Source="/Assets/PBLogo.png" Height="25" Margin="0,8" HorizontalAlignment="Left"/>
         </Grid>
 
         <!--Content Area - Margin.Left Expaned View 330 Colapsed View 90-->
