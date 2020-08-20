@@ -48,6 +48,7 @@
         <!--Content Area - Margin.Left Expaned View 330 Colapsed View 90-->
         <Grid Grid.Row="1" x:Name="ContentContainer"  Margin="330,50,20,20">
             <TextBlock>Content Test Hello blake</TextBlock>
+            <Button FontSize="5" Height="20" Width="50" Content="This a button" HorizontalAlignment="Center"></Button>
         </Grid>
 
     </Grid>
