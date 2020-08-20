@@ -47,7 +47,7 @@
 
         <!--Content Area - Margin.Left Expaned View 330 Colapsed View 90-->
         <Grid Grid.Row="1" x:Name="ContentContainer"  Margin="330,50,20,20">
-            <TextBlock>Content</TextBlock>
+            <TextBlock>Content Test Hello blake</TextBlock>
         </Grid>
 
     </Grid>
