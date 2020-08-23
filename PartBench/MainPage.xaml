@@ -29,7 +29,8 @@
                 <muxc:NavigationViewItem x:Name="NavItemBuilds" Tag="Home" Icon="Repair" Content="System Builds" Tapped="NavItemBuilds_Tapped"/>
                 <muxc:NavigationViewItem x:Name="NavItemBuildGuide" Tag="Home" Icon="Keyboard" Content="System Build Guides" Tapped="NavItemBuildGuidePage_Tapped"/>
                 <muxc:NavigationViewItemSeparator/>
-                <muxc:NavigationViewItemHeader Content="Test Pages"/>
+                <muxc:NavigationViewItemHeader Content="Other"/>
+                <muxc:NavigationViewItem x:Name="NavItemPricePerformance" Tag="Home" Icon="FourBars" Content="Price / Performance" Tapped="NavItemPricePerformance_Tapped"/>
                 <muxc:NavigationViewItem x:Name="NavItemTestPage" Tag="TestPage" Icon="AllApps" Content="TestPage" Tapped="NavItemTestPage_Tapped"/>
             </muxc:NavigationView.MenuItems>
         </muxc:NavigationView>
