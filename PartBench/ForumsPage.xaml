@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="PartBench.MainPage"
+    x:Class="PartBench.ForumsPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:PartBench"
@@ -49,9 +49,59 @@
 
         <!--Content Area - Margin.Left Expaned View 330 Colapsed View 90-->
         <Grid Grid.Row="1" x:Name="ContentContainer"  Margin="330,50,20,20">
-            <TextBlock>Content Test Hello blake</TextBlock>
-            <Button FontSize="5" Height="20" Width="50" Content="This a button" HorizontalAlignment="Center"></Button>
-        </Grid>
 
+            <!--Column Descriptions-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" FontSize="18" Text="System"/>
+            </Grid>
+
+            <!--All content inside is scrollable-->
+            <ScrollViewer Margin="0,30,-20,0">
+                <!--List Of builds-->
+                <StackPanel Grid.Row="1" Margin="0,0,20,0">
+                    <!--Break Line-->
+                    <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                    <!--Build Row Content-->
+                    <Grid Margin="0,0,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="2*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Forum"/>
+                        <TextBlock VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" Text="Topics"/>
+                        <TextBlock VerticalAlignment="Center" Grid.Column="2" Grid.Row="0" Text="Posts"/>
+                        <TextBlock VerticalAlignment="Center" Grid.Column="3" Text="Recent Topic/Post"/>
+                    </Grid>
+                </StackPanel>
+            </ScrollViewer>
+
+            <!--Grid adds fade out to the content at the botton of content area-->
+            <Grid VerticalAlignment="Bottom" Height="15">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#7F3D3D3D" Offset="0.4"/>
+                        <GradientStop Color="#FF3D3D3D" Offset="0.933"/>
+                        <GradientStop Color="#003D3D3D" Offset="0"/>
+                        <GradientStop Color="#B73D3D3D" Offset="0.527"/>
+                        <GradientStop Color="#E13D3D3D" Offset="0.713"/>
+                        <GradientStop Color="#F93D3D3D" Offset="0.83"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>
+

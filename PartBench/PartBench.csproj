@@ -131,6 +131,9 @@
     <Compile Include="FirstBuild.xaml.cs">
       <DependentUpon>FirstBuild.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ForumsPage.xaml.cs">
+      <DependentUpon>ForumsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FourthBuild.xaml.cs">
       <DependentUpon>FourthBuild.xaml</DependentUpon>
     </Compile>
@@ -196,6 +199,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FirstBuild.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ForumsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -22,7 +22,7 @@
         </Grid.RowDefinitions>
 
         <!--Nav Bar | Left-->
-        <muxc:NavigationView CompactModeThresholdWidth="0" Header="Price to Performance" Background="#3d3d3d" x:Name="NavView" Grid.RowSpan="2" IsTitleBarAutoPaddingEnabled="False" IsBackEnabled="True" BackRequested="NavView_BackRequested" OpenPaneLength="280" PaneClosing="NavView_PaneClosing" PaneOpening="NavView_PaneOpening">
+        <muxc:NavigationView CompactModeThresholdWidth="0" Header="Main Page Header" Background="#3d3d3d" x:Name="NavView" Grid.RowSpan="2" IsTitleBarAutoPaddingEnabled="False" IsBackEnabled="True" BackRequested="NavView_BackRequested" OpenPaneLength="280" PaneClosing="NavView_PaneClosing" PaneOpening="NavView_PaneOpening">
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItemHeader Content="Main Pages"/>
                 <muxc:NavigationViewItem x:Name="NavItemHome" Tag="Home" Icon="Home" Content="Home" Tapped="NavItemHome_Tapped"/>
@@ -32,6 +32,7 @@
                 <muxc:NavigationViewItemHeader Content="Other"/>
                 <muxc:NavigationViewItem x:Name="NavItemPricePerformance" Tag="Home" Icon="FourBars" Content="Price / Performance" Tapped="NavItemPricePerformance_Tapped"/>
                 <muxc:NavigationViewItem x:Name="NavItemTestPage" Tag="TestPage" Icon="AllApps" Content="TestPage" Tapped="NavItemTestPage_Tapped"/>
+                <muxc:NavigationViewItem x:Name="NavItemForumsPage" Tag="Forums" Icon="Emoji2" Content="Forums" Tapped="NavItemForumsPage_Tapped"/>
             </muxc:NavigationView.MenuItems>
         </muxc:NavigationView>
 
