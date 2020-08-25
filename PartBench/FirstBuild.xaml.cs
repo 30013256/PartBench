@@ -43,9 +43,9 @@ namespace PartBench
             this.Frame.Navigate(typeof(MainPage));
         }
 
-        private void NavItemTestPage_Tapped(object sender, TappedRoutedEventArgs e)
+        private void NavItemFAQPage_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(TestPage));
+            this.Frame.Navigate(typeof(FAQPage));
         }
 
         private void NavItemBuilds_Tapped(object sender, TappedRoutedEventArgs e)
@@ -67,6 +67,11 @@ namespace PartBench
         {
             this.Frame.Navigate(typeof(PricePerformancePage));
         }
+
+        private void NavItemBenchmark_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BenchmarkPage));
+        }
         #endregion
 
         #region Resize Content area on pane state
@@ -83,6 +88,6 @@ namespace PartBench
             margin.Left = 330;
             ContentContainer.Margin = margin;
         }
-        #endregion
+        #endregion        
     }
 }

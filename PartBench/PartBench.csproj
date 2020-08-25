@@ -119,6 +119,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BenchmarkPage.xaml.cs">
+      <DependentUpon>BenchmarkPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BuildEditorPage.xaml.cs">
       <DependentUpon>BuildEditorPage.xaml</DependentUpon>
     </Compile>
@@ -150,8 +153,8 @@
     <Compile Include="SplashScreen.xaml.cs">
       <DependentUpon>SplashScreen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TestPage.xaml.cs">
-      <DependentUpon>TestPage.xaml</DependentUpon>
+    <Compile Include="FAQPage.xaml.cs">
+      <DependentUpon>FAQPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ThirdBuild.xaml.cs">
       <DependentUpon>ThirdBuild.xaml</DependentUpon>
@@ -163,7 +166,12 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\badgame.png" />
+    <Content Include="Assets\BF4.png" />
+    <Content Include="Assets\csgo.png" />
+    <Content Include="Assets\honey.png" />
     <Content Include="Assets\logo.mp4" />
+    <Content Include="Assets\minecraft.png" />
     <Content Include="Assets\PBLogo.png" />
     <Content Include="Assets\sample.png" />
     <Content Include="Assets\sample2.png" />
@@ -176,6 +184,8 @@
     <Content Include="Assets\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\logo.png" />
     <Content Include="Assets\logo2.png" />
+    <Content Include="Assets\witcher.png" />
+    <Content Include="Assets\witcher3.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -186,6 +196,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="BenchmarkPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BuildEditorPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -226,7 +240,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TestPage.xaml">
+    <Page Include="FAQPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -236,14 +250,20 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Expander">
+      <Version>1.0.0</Version>
+    </PackageReference>
     <PackageReference Include="Marduk.Controls">
       <Version>1.0.2</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.2.9</Version>
+      <Version>6.2.10</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls">
+      <Version>6.1.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml">
-      <Version>2.4.2</Version>
+      <Version>2.4.3</Version>
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

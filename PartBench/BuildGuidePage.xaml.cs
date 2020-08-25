@@ -44,9 +44,9 @@ namespace PartBench
             this.Frame.Navigate(typeof(MainPage));
         }
 
-        private void NavItemTestPage_Tapped(object sender, TappedRoutedEventArgs e)
+        private void NavItemFAQPage_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(TestPage));
+            this.Frame.Navigate(typeof(FAQPage));
         }
 
         private void NavItemBuilds_Tapped(object sender, TappedRoutedEventArgs e)
@@ -68,27 +68,14 @@ namespace PartBench
         {
             this.Frame.Navigate(typeof(PricePerformancePage));
         }
-        #endregion
 
-        #region Resize Content area on pane state
-        private void NavView_PaneClosing(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewPaneClosingEventArgs args)
+        private void NavItemBenchmark_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            Thickness margin = ContentContainer.Margin;
-            margin.Left = 90;
-            ContentContainer.Margin = margin;
-        }
-
-        private void NavView_PaneOpening(Microsoft.UI.Xaml.Controls.NavigationView sender, object args)
-        {
-            Thickness margin = ContentContainer.Margin;
-            margin.Left = 330;
-            ContentContainer.Margin = margin;
+            this.Frame.Navigate(typeof(BenchmarkPage));
         }
         #endregion
 
-       
-
-        #region Page Navigation for Build Guides
+        #region Button Clicks for Build Guides
         private void Btn_Click1(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(FirstBuild));
@@ -109,5 +96,23 @@ namespace PartBench
             this.Frame.Navigate(typeof(FourthBuild));
         }
         #endregion
+
+        #region Resize Content area on pane state
+        private void NavView_PaneClosing(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewPaneClosingEventArgs args)
+        {
+            Thickness margin = ContentContainer.Margin;
+            margin.Left = 90;
+            ContentContainer.Margin = margin;
+        }
+
+        private void NavView_PaneOpening(Microsoft.UI.Xaml.Controls.NavigationView sender, object args)
+        {
+            Thickness margin = ContentContainer.Margin;
+            margin.Left = 330;
+            ContentContainer.Margin = margin;
+        }
+        #endregion
+
+        
     }
 }

@@ -1,0 +1,136 @@
+﻿<Page
+    x:Class="PartBench.FAQPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PartBench"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <!--Margin for page header-->
+    <Page.Resources>
+        <Thickness x:Key="NavigationViewHeaderMargin">50,50</Thickness>
+        <Style TargetType="Border" x:Key="PageBackground">
+            <Setter Property="Background" Value="Transparent"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <!--Rows Title Bar | Everything Else-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!--Nav Bar | Left-->
+        <muxc:NavigationView CompactModeThresholdWidth="0" Header="Home" Background="#3d3d3d" x:Name="NavView" Grid.RowSpan="2" IsTitleBarAutoPaddingEnabled="False" IsBackEnabled="True" BackRequested="NavView_BackRequested" OpenPaneLength="280" PaneClosing="NavView_PaneClosing" PaneOpening="NavView_PaneOpening">
+            <muxc:NavigationView.MenuItems>
+                <muxc:NavigationViewItem x:Name="NavItemHome" Tag="Home" Icon="Home" Content="Home" Tapped="NavItemHome_Tapped"/>
+                <muxc:NavigationViewItemSeparator/>
+                <muxc:NavigationViewItemHeader Content="Builds"/>
+                <muxc:NavigationViewItem x:Name="NavItemBuilds" Tag="Home" Icon="Repair" Content="System Builds" Tapped="NavItemBuilds_Tapped"/>
+                <muxc:NavigationViewItem x:Name="NavItemBuildGuide" Tag="Home" Icon="Keyboard" Content="System Build Guides" Tapped="NavItemBuildGuidePage_Tapped"/>
+                <muxc:NavigationViewItemSeparator/>
+                <muxc:NavigationViewItemHeader Content="Performance"/>
+                <muxc:NavigationViewItem x:Name="NavItemPricePerformance" Tag="Home" Icon="FourBars" Content="Price / Performance" Tapped="NavItemPricePerformance_Tapped"/>
+                <muxc:NavigationViewItem x:Name="NavItemBenchmark" Tag="Home" Icon="GoToStart" Content="Benchmarks" Tapped="NavItemBenchmark_Tapped"/>
+                <muxc:NavigationViewItemSeparator/>
+                <muxc:NavigationViewItemHeader Content="Other"/>
+                <muxc:NavigationViewItem x:Name="NavItemFAQPage" Tag="FAQ/About" Icon="Edit" Content="FAQ / About" Tapped="NavItemFAQPage_Tapped"/>
+                <muxc:NavigationViewItem x:Name="NavItemForumsPage" Tag="Forums" Icon="Emoji2" Content="Forums" Tapped="NavItemForumsPage_Tapped"/>
+            </muxc:NavigationView.MenuItems>
+        </muxc:NavigationView>
+
+        <!--Title bar set as draggable area-->
+        <Grid x:Name="AppTitleBar" Background="Transparent" Margin="50,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="LeftPaddingColumn" Width="0"/>
+                <ColumnDefinition/>
+                <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
+            </Grid.ColumnDefinitions>
+            <!--Logo-->
+            <Image Grid.Column="1" Source="/Assets/PBLogo.png" Height="25" Margin="0,8" HorizontalAlignment="Left"/>
+        </Grid>
+
+        <!--Content Area - Margin.Left Expaned View 330 Colapsed View 90-->
+        <Grid Grid.Row="1" x:Name="ContentContainer"  Margin="330,50,20,20">
+            <ScrollViewer Margin="0,30,-20,0">
+                <StackPanel Margin="0,0,20,0">
+                    <TextBlock FontSize="42" Text="About"/>
+                    <!--Break Line-->
+                    <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                    <StackPanel Margin="0,0,0,20">
+                        <Grid Margin="0,0,0,20">
+                            <StackPanel>
+                                <TextBlock TextWrapping="Wrap" FontSize="17" Margin="0,0,0,20">Welcome to PartBench, 
+                                    A small application developed by a team of three IT Students Blah blah blah now it's time for some lorem ipsum...
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Amet cursus sit amet dictum sit amet justo. Vestibulum lorem sed risus ultricies. 
+                                    A iaculis at erat pellentesque adipiscing commodo elit at. In est ante in nibh mauris cursus. 
+                                    Magna fringilla urna porttitor rhoncus dolor purus non enim praesent. 
+                                    Consectetur adipiscing elit pellentesque habitant morbi tristique senectus. 
+                                    Diam quis enim lobortis scelerisque fermentum dui faucibus. Pellentesque eu tincidunt tortor aliquam. 
+                                    Euismod elementum nisi quis eleifend quam adipiscing. Vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus.
+                                    Suspendisse interdum consectetur libero id faucibus. Arcu bibendum at varius vel. Tincidunt augue interdum velit euismod in pellentesque massa placerat.
+                                    Id consectetur purus ut faucibus pulvinar elementum integer enim neque.
+                                </TextBlock>
+                                <TextBlock TextWrapping="Wrap" FontSize="17">
+                                    Scelerisque varius morbi enim nunc faucibus a pellentesque sit amet.
+                                    Dolor purus non enim praesent elementum facilisis leo vel. Bibendum enim facilisis gravida neque convallis. 
+                                    Felis eget nunc lobortis mattis aliquam faucibus. Dui id ornare arcu odio ut sem nulla. 
+                                    Sed adipiscing diam donec adipiscing tristique risus nec feugiat. Scelerisque varius morbi enim nunc faucibus a pellentesque.
+                                    Dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit ut aliquam purus sit amet luctus. 
+                                    Tincidunt praesent semper feugiat nibh sed. Nibh venenatis cras sed felis eget velit aliquet sagittis id. 
+                                    Lectus proin nibh nisl condimentum id venenatis. Maecenas volutpat blandit aliquam etiam erat velit. 
+                                    Orci sagittis eu volutpat odio facilisis mauris sit. Feugiat in ante metus dictum at. 
+                                    Aliquam sem et tortor consequat id porta nibh. Ac turpis egestas sed tempus urna et pharetra pharetra. 
+                                    Leo in vitae turpis massa.
+                                </TextBlock>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                    <TextBlock FontSize="42" Text="FAQ"/>
+                    <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                    <Grid Margin="0,0,0,50">
+                        <StackPanel Margin="0,0,10,0">
+                            <controls:Expander Background="Transparent" IsExpanded="False" Margin="0,0,0,30">
+                                <controls:Expander.Header>
+                                    <TextBlock Text="Question: my GPU is making weird noises. Whats wrong?" FontWeight="Bold"/>
+                                </controls:Expander.Header>
+                                <TextBlock TextWrapping="Wrap" Margin="10,0,10,0" Text="Answer: Essentially the easiest reason is because the game you are playing is experiencing too much FPS all at once, therefore the capacitors on your card vibrate, making the sound"/>
+                            </controls:Expander>
+                            <controls:Expander Background="Transparent" IsExpanded="False" Margin="0,0,0,30">
+                                <controls:Expander.Header>
+                                    <TextBlock FontWeight="Bold" Text="Question: can I hotswap certain parts of my computer?"/>
+                                </controls:Expander.Header>
+                                <TextBlock TextWrapping="Wrap" Margin="10,0,10,0" Text="Answer: Yes."/>
+                            </controls:Expander>
+                            <controls:Expander Background="Transparent" IsExpanded="False" Margin="0,0,0,30">
+                                <controls:Expander.Header>
+                                    <TextBlock FontWeight="Bold" Text="Question: my computer is constantly freezing after I try to overclock my GPU, any solutions?"/>
+                                </controls:Expander.Header>
+                                <TextBlock TextWrapping="Wrap" Margin="10,0,10,0" Text="Answer: Yes. You're overloading the cards boundaries of how much it can be overclocked. Try starting the card at its base clocks and slowly increasing the memory clock, core clock, and voltage to a point where something goes wrong, the result before that initial freeze will be the best overclock for your card"/>
+                            </controls:Expander>
+                            <controls:Expander Background="Transparent" IsExpanded="False" Margin="0,0,0,30">
+                                <controls:Expander.Header>
+                                    <TextBlock FontWeight="Bold" Text="Question: would investing in an M.2 SSD be a good idea for games?"/>
+                                </controls:Expander.Header>
+                                <TextBlock TextWrapping="Wrap" Margin="10,0,10,0" Text="Answer: Yes. this reduces the need to use an HDD."/>
+                            </controls:Expander>
+                            <controls:Expander Background="Transparent" IsExpanded="False" Margin="0,0,0,30">
+                                <controls:Expander.Header>
+                                    <TextBlock FontWeight="Bold" Text="Question: I'm making a budget pc that can run games at 60FPS 1080p, would an AMD CPU be good or should I think about using an Intel CPU?"/>
+                                </controls:Expander.Header>
+                                <TextBlock TextWrapping="Wrap" Margin="10,0,10,0" Text="Answer: AMD would be a good idea as it is a cheaper option and you could probably find a good Ryzen CPU for the same price as a i5-8500."/>
+                            </controls:Expander>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </ScrollViewer>           
+        </Grid>
+
+    </Grid>
+</Page>

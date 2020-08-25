@@ -20,13 +20,12 @@ namespace PartBench
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class PricePerformancePage : Page
+    public sealed partial class BenchmarkPage : Page
     {
-        public PricePerformancePage()
+        public BenchmarkPage()
         {
             this.InitializeComponent();
-
-            // Set XAML element as a draggable region.
+            //Sets Dragable Area
             Window.Current.SetTitleBar(AppTitleBar);
         }
 
@@ -91,4 +90,3 @@ namespace PartBench
         #endregion        
     }
 }
-
