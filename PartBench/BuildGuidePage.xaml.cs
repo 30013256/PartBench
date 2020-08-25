@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
@@ -28,8 +29,39 @@ namespace PartBench
         public BuildGuidePage()
         {
             this.InitializeComponent();
+
             Window.Current.SetTitleBar(AppTitleBar);
+
+            sel();
         }
+
+        public async void sel()
+        {
+            await Task.Delay(10);
+            NavItemBuildGuide.IsSelected = true;
+        }  
+        
+        #region Page Specific Nav
+        private void Btn_Click1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(FirstBuild));
+        }
+
+        private void Btn_Click2(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SecondBuild));
+        }
+
+        private void Btn_Click3(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ThirdBuild));
+        }
+
+        private void Btn_Click4(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(FourthBuild));
+        }
+        #endregion
 
         #region Nav Items
         private void NavView_BackRequested(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewBackRequestedEventArgs args)
@@ -75,28 +107,6 @@ namespace PartBench
         }
         #endregion
 
-        #region Button Clicks for Build Guides
-        private void Btn_Click1(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(FirstBuild));
-        }
-
-        private void Btn_Click2(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(SecondBuild));
-        }
-
-        private void Btn_Click3(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(ThirdBuild));
-        }
-
-        private void Btn_Click4(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(FourthBuild));
-        }
-        #endregion
-
         #region Resize Content area on pane state
         private void NavView_PaneClosing(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewPaneClosingEventArgs args)
         {
@@ -108,11 +118,10 @@ namespace PartBench
         private void NavView_PaneOpening(Microsoft.UI.Xaml.Controls.NavigationView sender, object args)
         {
             Thickness margin = ContentContainer.Margin;
-            margin.Left = 330;
+            margin.Left = 350;
             ContentContainer.Margin = margin;
         }
-        #endregion
-
+        #endregion     
         
     }
 }

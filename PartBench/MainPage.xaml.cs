@@ -45,7 +45,42 @@ namespace PartBench
             titleBar.ButtonHoverBackgroundColor = Windows.UI.Color.FromArgb(20, 255, 255, 255);
             titleBar.ButtonPressedBackgroundColor = Windows.UI.Color.FromArgb(50, 255, 255, 255);
             titleBar.ButtonInactiveBackgroundColor = Windows.UI.Color.FromArgb(0, 255, 255, 255);
+
+            sel();
         }
+        
+        public async void sel()
+        {
+            await Task.Delay(10);
+            NavItemHome.IsSelected = true;
+        }
+
+        #region Page Specific Nav
+        private void btnVeiwBuildGuides_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BuildGuidePage));
+        }
+
+        private void btnBugetAmdGuide_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(FirstBuild));
+        }
+
+        private void btnHighEndIntelGuide_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ThirdBuild));
+        }
+
+        private void btnVeiwBuilds_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BuildsPage));
+        }
+
+        private void btnBeginBuilding_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BuildEditorPage));
+        }
+        #endregion
 
         #region Nav Items
         private void NavView_BackRequested(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewBackRequestedEventArgs args)
@@ -102,9 +137,9 @@ namespace PartBench
         private void NavView_PaneOpening(Microsoft.UI.Xaml.Controls.NavigationView sender, object args)
         {
             Thickness margin = ContentContainer.Margin;
-            margin.Left = 330;
+            margin.Left = 350;
             ContentContainer.Margin = margin;
         }
-        #endregion        
+        #endregion     
     }
 }

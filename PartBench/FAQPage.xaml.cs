@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -27,7 +28,15 @@ namespace PartBench
             this.InitializeComponent();
 
             //Sets Dragable Area
-            Window.Current.SetTitleBar(AppTitleBar);            
+            Window.Current.SetTitleBar(AppTitleBar);
+
+            sel();
+        }
+
+        public async void sel()
+        {
+            await Task.Delay(10);
+            NavItemFAQPage.IsSelected = true;
         }
 
         #region Nav Items
@@ -85,9 +94,9 @@ namespace PartBench
         private void NavView_PaneOpening(Microsoft.UI.Xaml.Controls.NavigationView sender, object args)
         {
             Thickness margin = ContentContainer.Margin;
-            margin.Left = 330;
+            margin.Left = 350;
             ContentContainer.Margin = margin;
         }
-        #endregion        
+        #endregion     
     }
 }

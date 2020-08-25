@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -27,8 +28,23 @@ namespace PartBench
             this.InitializeComponent();
 
             Window.Current.SetTitleBar(AppTitleBar);
+
+            sel();
         }
 
+        public async void sel()
+        {
+            await Task.Delay(10);
+            NavItemBuilds.IsSelected = true;
+        }
+
+        #region Page Specific Nav
+        private void btnEditBuild_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BuildEditorPage));
+        }
+        #endregion
+        
         #region Nav Items
         private void NavView_BackRequested(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewBackRequestedEventArgs args)
         {
@@ -71,11 +87,6 @@ namespace PartBench
         {
             this.Frame.Navigate(typeof(BenchmarkPage));
         }
-
-        private void btnEditBuild_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(BuildEditorPage));
-        }
         #endregion
 
         #region Resize Content area on pane state
@@ -89,10 +100,12 @@ namespace PartBench
         private void NavView_PaneOpening(Microsoft.UI.Xaml.Controls.NavigationView sender, object args)
         {
             Thickness margin = ContentContainer.Margin;
-            margin.Left = 330;
+            margin.Left = 350;
             ContentContainer.Margin = margin;
         }
-        #endregion        
+        #endregion
+
+        
     }
 }
 

@@ -22,7 +22,7 @@
         </Grid.RowDefinitions>
 
         <!--Nav Bar | Left-->
-        <muxc:NavigationView CompactModeThresholdWidth="0" Header="Home" Background="#3d3d3d" x:Name="NavView" Grid.RowSpan="2" IsTitleBarAutoPaddingEnabled="False" IsBackEnabled="True" BackRequested="NavView_BackRequested" OpenPaneLength="280" PaneClosing="NavView_PaneClosing" PaneOpening="NavView_PaneOpening">
+        <muxc:NavigationView CompactModeThresholdWidth="0" Header="Build Editor" Background="#3d3d3d" x:Name="NavView" Grid.RowSpan="2" IsTitleBarAutoPaddingEnabled="False" IsBackEnabled="True" BackRequested="NavView_BackRequested" OpenPaneLength="300" PaneClosing="NavView_PaneClosing" PaneOpening="NavView_PaneOpening">
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItem x:Name="NavItemHome" Tag="Home" Icon="Home" Content="Home" Tapped="NavItemHome_Tapped"/>
                 <muxc:NavigationViewItemSeparator/>
@@ -48,12 +48,11 @@
                 <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
             </Grid.ColumnDefinitions>
             <!--Logo-->
-            <Image Grid.Column="1" Source="/Assets/PBLogo.png" Height="25" Margin="0,8" HorizontalAlignment="Left"/>
+            <Image Grid.Column="1" Source="/Assets/PBLogo.png" Height="24" Margin="40,10,0,0" HorizontalAlignment="Left"/>
         </Grid>
 
         <!--Content Area - Margin.Left Expaned View 330 Colapsed View 90-->
-        <Grid Grid.Row="1" x:Name="ContentContainer"  Margin="330,50,20,20">
-
+        <Grid Grid.Row="1" x:Name="ContentContainer"  Margin="350,50,20,20">
             <!--Column Descriptions-->
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -70,10 +69,8 @@
 
             <ScrollViewer Margin="0,30,-20,0">
                 <StackPanel Margin="0,0,20,0">
-
                     <!--Break Line-->
                     <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-
                     <!--Build Row Content-->
                     <Grid Margin="0,0,0,0">
                         <Grid.ColumnDefinitions>
@@ -101,7 +98,6 @@
 
                     <!--Break Line-->
                     <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-
                     <!--Build Row Content-->
                     <Grid Margin="0,0,0,0">
                         <Grid.ColumnDefinitions>
@@ -129,7 +125,6 @@
 
                     <!--Break Line-->
                     <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-
                     <!--Build Row Content-->
                     <Grid Margin="0,0,0,0">
                         <Grid.ColumnDefinitions>
@@ -157,7 +152,6 @@
 
                     <!--Break Line-->
                     <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-
                     <!--Build Row Content-->
                     <Grid Margin="0,0,0,0">
                         <Grid.ColumnDefinitions>
@@ -185,7 +179,6 @@
 
                     <!--Break Line-->
                     <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-
                     <!--Build Row Content-->
                     <Grid Margin="0,0,0,0">
                         <Grid.ColumnDefinitions>
@@ -213,7 +206,6 @@
 
                     <!--Break Line-->
                     <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-
                     <!--Build Row Content-->
                     <Grid Margin="0,0,0,0">
                         <Grid.ColumnDefinitions>
@@ -241,7 +233,6 @@
 
                     <!--Break Line-->
                     <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-
                     <!--Build Row Content-->
                     <Grid Margin="0,0,0,0">
                         <Grid.ColumnDefinitions>
@@ -269,7 +260,6 @@
 
                     <!--Break Line-->
                     <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-
                     <!--Build Row Content-->
                     <Grid Margin="0,0,0,0">
                         <Grid.ColumnDefinitions>
@@ -294,10 +284,22 @@
                         <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="-"/>
                         <AppBarButton VerticalAlignment="Center" Grid.Column="3" Icon="Delete" Height="36" Width="48" HorizontalAlignment="Right" Margin="0,0,0,0"/>
                     </Grid>
-
                 </StackPanel>
             </ScrollViewer>
+            
+            <!--Grid adds fade out to the content at the botton of content area-->
+            <Grid VerticalAlignment="Bottom" Height="15">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#7F3D3D3D" Offset="0.4"/>
+                        <GradientStop Color="#FF3D3D3D" Offset="0.933"/>
+                        <GradientStop Color="#003D3D3D" Offset="0"/>
+                        <GradientStop Color="#B73D3D3D" Offset="0.527"/>
+                        <GradientStop Color="#E13D3D3D" Offset="0.713"/>
+                        <GradientStop Color="#F93D3D3D" Offset="0.83"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+            </Grid>
         </Grid>
-
     </Grid>
 </Page>

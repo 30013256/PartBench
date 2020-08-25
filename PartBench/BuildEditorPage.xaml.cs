@@ -84,10 +84,10 @@ namespace PartBench
         private void NavView_PaneOpening(Microsoft.UI.Xaml.Controls.NavigationView sender, object args)
         {
             Thickness margin = ContentContainer.Margin;
-            margin.Left = 330;
+            margin.Left = 350;
             ContentContainer.Margin = margin;
         }
-        #endregion        
+        #endregion     
     }
 }
 

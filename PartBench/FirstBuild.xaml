@@ -22,7 +22,7 @@
         </Grid.RowDefinitions>
 
         <!--Nav Bar | Left-->
-        <muxc:NavigationView CompactModeThresholdWidth="0" Header="Home" Background="#3d3d3d" x:Name="NavView" Grid.RowSpan="2" IsTitleBarAutoPaddingEnabled="False" IsBackEnabled="True" BackRequested="NavView_BackRequested" OpenPaneLength="280" PaneClosing="NavView_PaneClosing" PaneOpening="NavView_PaneOpening">
+        <muxc:NavigationView CompactModeThresholdWidth="0" Header="Budget AMD Build Guide" Background="#3d3d3d" x:Name="NavView" Grid.RowSpan="2" IsTitleBarAutoPaddingEnabled="False" IsBackEnabled="True" BackRequested="NavView_BackRequested" OpenPaneLength="300" PaneClosing="NavView_PaneClosing" PaneOpening="NavView_PaneOpening">
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItem x:Name="NavItemHome" Tag="Home" Icon="Home" Content="Home" Tapped="NavItemHome_Tapped"/>
                 <muxc:NavigationViewItemSeparator/>
@@ -48,11 +48,11 @@
                 <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
             </Grid.ColumnDefinitions>
             <!--Logo-->
-            <Image Grid.Column="1" Source="/Assets/PBLogo.png" Height="25" Margin="0,8" HorizontalAlignment="Left"/>
+            <Image Grid.Column="1" Source="/Assets/PBLogo.png" Height="24" Margin="40,10,0,0" HorizontalAlignment="Left"/>
         </Grid>
 
-        <!--Content Area - Margin.Left Expaned View 330 Colapsed View 90-->
-        <Grid Grid.Row="1" x:Name="ContentContainer"  Margin="330,50,20,20">
+        <!--Content Area - Margin.Left Expaned View 350 Colapsed View 90-->
+        <Grid Grid.Row="1" x:Name="ContentContainer"  Margin="350,50,20,20">
             <Image Source="Assets/sample.png" MaxHeight="500" MaxWidth="450" Height="300" HorizontalAlignment="Right" VerticalAlignment="Top"/>
             <ScrollViewer Margin="0,0,-20,0">
                 <VariableSizedWrapGrid Margin="0,0,320,0">
