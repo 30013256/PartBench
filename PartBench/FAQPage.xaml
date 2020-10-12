@@ -10,53 +10,10 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <!--Margin for page header-->
-    <Page.Resources>
-        <Thickness x:Key="NavigationViewHeaderMargin">50,50</Thickness>
-        <Style TargetType="Border" x:Key="PageBackground">
-            <Setter Property="Background" Value="Transparent"/>
-        </Style>
-    </Page.Resources>
 
-    <Grid>
-        <!--Rows Title Bar | Everything Else-->
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-
-        <!--Nav Bar | Left-->
-        <muxc:NavigationView CompactModeThresholdWidth="0" Header="FAQ / About" Background="#3d3d3d" x:Name="NavView" Grid.RowSpan="2" IsTitleBarAutoPaddingEnabled="False" IsBackEnabled="True" BackRequested="NavView_BackRequested" OpenPaneLength="300" PaneClosing="NavView_PaneClosing" PaneOpening="NavView_PaneOpening">
-            <muxc:NavigationView.MenuItems>
-                <muxc:NavigationViewItem x:Name="NavItemHome" Tag="Home" Icon="Home" Content="Home" Tapped="NavItemHome_Tapped"/>
-                <muxc:NavigationViewItemSeparator/>
-                <muxc:NavigationViewItemHeader Content="Builds"/>
-                <muxc:NavigationViewItem x:Name="NavItemBuilds" Tag="Home" Icon="Repair" Content="System Builds" Tapped="NavItemBuilds_Tapped"/>
-                <muxc:NavigationViewItem x:Name="NavItemBuildGuide" Tag="Home" Icon="Keyboard" Content="System Build Guides" Tapped="NavItemBuildGuidePage_Tapped"/>
-                <muxc:NavigationViewItemSeparator/>
-                <muxc:NavigationViewItemHeader Content="Performance"/>
-                <muxc:NavigationViewItem x:Name="NavItemPricePerformance" Tag="Home" Icon="FourBars" Content="Price / Performance" Tapped="NavItemPricePerformance_Tapped"/>
-                <muxc:NavigationViewItem x:Name="NavItemBenchmark" Tag="Home" Icon="GoToStart" Content="Benchmarks" Tapped="NavItemBenchmark_Tapped"/>
-                <muxc:NavigationViewItemSeparator/>
-                <muxc:NavigationViewItemHeader Content="Other"/>
-                <muxc:NavigationViewItem x:Name="NavItemFAQPage" Tag="FAQ/About" Icon="Edit" Content="FAQ / About" Tapped="NavItemFAQPage_Tapped"/>
-                <muxc:NavigationViewItem x:Name="NavItemForumsPage" Tag="Forums" Icon="Emoji2" Content="Forums" Tapped="NavItemForumsPage_Tapped"/>
-            </muxc:NavigationView.MenuItems>
-        </muxc:NavigationView>
-
-        <!--Title bar set as draggable area-->
-        <Grid x:Name="AppTitleBar" Background="Transparent" Margin="50,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition x:Name="LeftPaddingColumn" Width="0"/>
-                <ColumnDefinition/>
-                <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
-            </Grid.ColumnDefinitions>
-            <!--Logo-->
-            <Image Grid.Column="1" Source="/Assets/PBLogo.png" Height="24" Margin="40,10,0,0" HorizontalAlignment="Left"/>
-        </Grid>
 
         <!--Content Area - Margin.Left Expaned View 350 Colapsed View 90-->
-        <Grid Grid.Row="1" x:Name="ContentContainer"  Margin="350,50,20,20">
+        <Grid Background="#3d3d3d">
             <ScrollViewer Margin="0,30,-20,0">
                 <StackPanel Margin="0,0,20,0">
                     <TextBlock FontSize="42" Text="About"/>
@@ -131,5 +88,5 @@
                 </StackPanel>
             </ScrollViewer>
         </Grid>
-    </Grid>
+
 </Page>

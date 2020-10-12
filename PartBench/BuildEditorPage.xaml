@@ -9,297 +9,255 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <!--Margin for page header-->
-    <Page.Resources>
-        <Thickness x:Key="NavigationViewHeaderMargin">50,50</Thickness>
-    </Page.Resources>
-
-    <Grid>
-        <!--Rows Title Bar | Everything Else-->
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-
-        <!--Nav Bar | Left-->
-        <muxc:NavigationView CompactModeThresholdWidth="0" Header="Build Editor" Background="#3d3d3d" x:Name="NavView" Grid.RowSpan="2" IsTitleBarAutoPaddingEnabled="False" IsBackEnabled="True" BackRequested="NavView_BackRequested" OpenPaneLength="300" PaneClosing="NavView_PaneClosing" PaneOpening="NavView_PaneOpening">
-            <muxc:NavigationView.MenuItems>
-                <muxc:NavigationViewItem x:Name="NavItemHome" Tag="Home" Icon="Home" Content="Home" Tapped="NavItemHome_Tapped"/>
-                <muxc:NavigationViewItemSeparator/>
-                <muxc:NavigationViewItemHeader Content="Builds"/>
-                <muxc:NavigationViewItem x:Name="NavItemBuilds" Tag="Home" Icon="Repair" Content="System Builds" Tapped="NavItemBuilds_Tapped"/>
-                <muxc:NavigationViewItem x:Name="NavItemBuildGuide" Tag="Home" Icon="Keyboard" Content="System Build Guides" Tapped="NavItemBuildGuidePage_Tapped"/>
-                <muxc:NavigationViewItemSeparator/>
-                <muxc:NavigationViewItemHeader Content="Performance"/>
-                <muxc:NavigationViewItem x:Name="NavItemPricePerformance" Tag="Home" Icon="FourBars" Content="Price / Performance" Tapped="NavItemPricePerformance_Tapped"/>
-                <muxc:NavigationViewItem x:Name="NavItemBenchmark" Tag="Home" Icon="GoToStart" Content="Benchmarks" Tapped="NavItemBenchmark_Tapped"/>
-                <muxc:NavigationViewItemSeparator/>
-                <muxc:NavigationViewItemHeader Content="Other"/>
-                <muxc:NavigationViewItem x:Name="NavItemFAQPage" Tag="FAQ/About" Icon="Edit" Content="FAQ / About" Tapped="NavItemFAQPage_Tapped"/>
-                <muxc:NavigationViewItem x:Name="NavItemForumsPage" Tag="Forums" Icon="Emoji2" Content="Forums" Tapped="NavItemForumsPage_Tapped"/>
-            </muxc:NavigationView.MenuItems>
-        </muxc:NavigationView>
-
-        <!--Title bar set as draggable area-->
-        <Grid x:Name="AppTitleBar" Background="Transparent" Margin="50,0">
+    
+    <!--Content Area - Margin.Left Expaned View 330 Colapsed View 90-->
+    <Grid Background="#3d3d3d">
+        <!--Column Descriptions-->
+        <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition x:Name="LeftPaddingColumn" Width="0"/>
-                <ColumnDefinition/>
-                <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-            <!--Logo-->
-            <Image Grid.Column="1" Source="/Assets/PBLogo.png" Height="24" Margin="40,10,0,0" HorizontalAlignment="Left"/>
+            <TextBlock Grid.Column="0" Text="Component"/>
+            <TextBlock Grid.Column="1" Text="Selection"/>
+            <TextBlock Grid.Column="2" Text="Price"/>
+            <TextBlock HorizontalAlignment="Right" Grid.Column="3" Text="Remove Part"/>
         </Grid>
 
-        <!--Content Area - Margin.Left Expaned View 330 Colapsed View 90-->
-        <Grid Grid.Row="1" x:Name="ContentContainer"  Margin="350,50,20,20">
-            <!--Column Descriptions-->
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="2*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Component"/>
-                <TextBlock Grid.Column="1" Text="Selection"/>
-                <TextBlock Grid.Column="2" Text="Price"/>
-                <TextBlock HorizontalAlignment="Right" Grid.Column="3" Text="Remove Part"/>
-            </Grid>
+        <ScrollViewer Margin="0,30,-20,0">
+            <StackPanel Margin="0,0,20,0">
+                <!--Break Line-->
+                <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                <!--Build Row Content-->
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="CPU"/>
+                    <DropDownButton Content="Select" VerticalAlignment="Bottom" Grid.Column="1" Margin="0,0,0,3">
+                        <DropDownButton.Flyout>
+                            <Flyout>
+                                <ListView>
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                </ListView>
+                            </Flyout>
+                        </DropDownButton.Flyout>
+                    </DropDownButton>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="-"/>
+                    <AppBarButton VerticalAlignment="Center" Grid.Column="3" Icon="Delete" Height="36" Width="48" HorizontalAlignment="Right" Margin="0,0,0,0"/>
+                </Grid>
 
-            <ScrollViewer Margin="0,30,-20,0">
-                <StackPanel Margin="0,0,20,0">
-                    <!--Break Line-->
-                    <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                    <!--Build Row Content-->
-                    <Grid Margin="0,0,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="2*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="CPU"/>
-                        <DropDownButton Content="Select" VerticalAlignment="Bottom" Grid.Column="1" Margin="0,0,0,3">
-                            <DropDownButton.Flyout>
-                                <Flyout>
-                                    <ListView>
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                    </ListView>
-                                </Flyout>
-                            </DropDownButton.Flyout>
-                        </DropDownButton>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="-"/>
-                        <AppBarButton VerticalAlignment="Center" Grid.Column="3" Icon="Delete" Height="36" Width="48" HorizontalAlignment="Right" Margin="0,0,0,0"/>
-                    </Grid>
+                <!--Break Line-->
+                <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                <!--Build Row Content-->
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="CPU Cooler"/>
+                    <DropDownButton Content="Select" VerticalAlignment="Bottom" Grid.Column="1" Margin="0,0,0,3">
+                        <DropDownButton.Flyout>
+                            <Flyout>
+                                <ListView>
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                </ListView>
+                            </Flyout>
+                        </DropDownButton.Flyout>
+                    </DropDownButton>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="-"/>
+                    <AppBarButton VerticalAlignment="Center" Grid.Column="3" Icon="Delete" Height="36" Width="48" HorizontalAlignment="Right" Margin="0,0,0,0"/>
+                </Grid>
 
-                    <!--Break Line-->
-                    <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                    <!--Build Row Content-->
-                    <Grid Margin="0,0,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="2*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="CPU Cooler"/>
-                        <DropDownButton Content="Select" VerticalAlignment="Bottom" Grid.Column="1" Margin="0,0,0,3">
-                            <DropDownButton.Flyout>
-                                <Flyout>
-                                    <ListView>
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                    </ListView>
-                                </Flyout>
-                            </DropDownButton.Flyout>
-                        </DropDownButton>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="-"/>
-                        <AppBarButton VerticalAlignment="Center" Grid.Column="3" Icon="Delete" Height="36" Width="48" HorizontalAlignment="Right" Margin="0,0,0,0"/>
-                    </Grid>
+                <!--Break Line-->
+                <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                <!--Build Row Content-->
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" MinWidth="100"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Motherboard"/>
+                    <DropDownButton Content="Select" VerticalAlignment="Bottom" Grid.Column="1" Margin="0,0,0,3">
+                        <DropDownButton.Flyout>
+                            <Flyout>
+                                <ListView>
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                </ListView>
+                            </Flyout>
+                        </DropDownButton.Flyout>
+                    </DropDownButton>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="-"/>
+                    <AppBarButton VerticalAlignment="Center" Grid.Column="3" Icon="Delete" Height="36" Width="48" HorizontalAlignment="Right" Margin="0,0,0,0"/>
+                </Grid>
 
-                    <!--Break Line-->
-                    <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                    <!--Build Row Content-->
-                    <Grid Margin="0,0,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*" MinWidth="100"/>
-                            <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="2*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Motherboard"/>
-                        <DropDownButton Content="Select" VerticalAlignment="Bottom" Grid.Column="1" Margin="0,0,0,3">
-                            <DropDownButton.Flyout>
-                                <Flyout>
-                                    <ListView>
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                    </ListView>
-                                </Flyout>
-                            </DropDownButton.Flyout>
-                        </DropDownButton>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="-"/>
-                        <AppBarButton VerticalAlignment="Center" Grid.Column="3" Icon="Delete" Height="36" Width="48" HorizontalAlignment="Right" Margin="0,0,0,0"/>
-                    </Grid>
+                <!--Break Line-->
+                <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                <!--Build Row Content-->
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Memory"/>
+                    <DropDownButton Content="Select" VerticalAlignment="Bottom" Grid.Column="1" Margin="0,0,0,3">
+                        <DropDownButton.Flyout>
+                            <Flyout>
+                                <ListView>
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                </ListView>
+                            </Flyout>
+                        </DropDownButton.Flyout>
+                    </DropDownButton>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="-"/>
+                    <AppBarButton VerticalAlignment="Center" Grid.Column="3" Icon="Delete" Height="36" Width="48" HorizontalAlignment="Right" Margin="0,0,0,0"/>
+                </Grid>
 
-                    <!--Break Line-->
-                    <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                    <!--Build Row Content-->
-                    <Grid Margin="0,0,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="2*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Memory"/>
-                        <DropDownButton Content="Select" VerticalAlignment="Bottom" Grid.Column="1" Margin="0,0,0,3">
-                            <DropDownButton.Flyout>
-                                <Flyout>
-                                    <ListView>
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                    </ListView>
-                                </Flyout>
-                            </DropDownButton.Flyout>
-                        </DropDownButton>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="-"/>
-                        <AppBarButton VerticalAlignment="Center" Grid.Column="3" Icon="Delete" Height="36" Width="48" HorizontalAlignment="Right" Margin="0,0,0,0"/>
-                    </Grid>
+                <!--Break Line-->
+                <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                <!--Build Row Content-->
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Storage"/>
+                    <DropDownButton Content="Select" VerticalAlignment="Bottom" Grid.Column="1" Margin="0,0,0,3">
+                        <DropDownButton.Flyout>
+                            <Flyout>
+                                <ListView>
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                </ListView>
+                            </Flyout>
+                        </DropDownButton.Flyout>
+                    </DropDownButton>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="-"/>
+                    <AppBarButton VerticalAlignment="Center" Grid.Column="3" Icon="Delete" Height="36" Width="48" HorizontalAlignment="Right" Margin="0,0,0,0"/>
+                </Grid>
 
-                    <!--Break Line-->
-                    <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                    <!--Build Row Content-->
-                    <Grid Margin="0,0,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="2*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Storage"/>
-                        <DropDownButton Content="Select" VerticalAlignment="Bottom" Grid.Column="1" Margin="0,0,0,3">
-                            <DropDownButton.Flyout>
-                                <Flyout>
-                                    <ListView>
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                    </ListView>
-                                </Flyout>
-                            </DropDownButton.Flyout>
-                        </DropDownButton>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="-"/>
-                        <AppBarButton VerticalAlignment="Center" Grid.Column="3" Icon="Delete" Height="36" Width="48" HorizontalAlignment="Right" Margin="0,0,0,0"/>
-                    </Grid>
+                <!--Break Line-->
+                <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                <!--Build Row Content-->
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Video Card"/>
+                    <DropDownButton Content="Select" VerticalAlignment="Bottom" Grid.Column="1" Margin="0,0,0,3">
+                        <DropDownButton.Flyout>
+                            <Flyout>
+                                <ListView>
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                </ListView>
+                            </Flyout>
+                        </DropDownButton.Flyout>
+                    </DropDownButton>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="-"/>
+                    <AppBarButton VerticalAlignment="Center" Grid.Column="3" Icon="Delete" Height="36" Width="48" HorizontalAlignment="Right" Margin="0,0,0,0"/>
+                </Grid>
 
-                    <!--Break Line-->
-                    <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                    <!--Build Row Content-->
-                    <Grid Margin="0,0,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="2*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Video Card"/>
-                        <DropDownButton Content="Select" VerticalAlignment="Bottom" Grid.Column="1" Margin="0,0,0,3">
-                            <DropDownButton.Flyout>
-                                <Flyout>
-                                    <ListView>
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                    </ListView>
-                                </Flyout>
-                            </DropDownButton.Flyout>
-                        </DropDownButton>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="-"/>
-                        <AppBarButton VerticalAlignment="Center" Grid.Column="3" Icon="Delete" Height="36" Width="48" HorizontalAlignment="Right" Margin="0,0,0,0"/>
-                    </Grid>
+                <!--Break Line-->
+                <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                <!--Build Row Content-->
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Case"/>
+                    <DropDownButton Content="Select" VerticalAlignment="Bottom" Grid.Column="1" Margin="0,0,0,3">
+                        <DropDownButton.Flyout>
+                            <Flyout>
+                                <ListView>
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                </ListView>
+                            </Flyout>
+                        </DropDownButton.Flyout>
+                    </DropDownButton>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="-"/>
+                    <AppBarButton VerticalAlignment="Center" Grid.Column="3" Icon="Delete" Height="36" Width="48" HorizontalAlignment="Right" Margin="0,0,0,0"/>
+                </Grid>
 
-                    <!--Break Line-->
-                    <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                    <!--Build Row Content-->
-                    <Grid Margin="0,0,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="2*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Case"/>
-                        <DropDownButton Content="Select" VerticalAlignment="Bottom" Grid.Column="1" Margin="0,0,0,3">
-                            <DropDownButton.Flyout>
-                                <Flyout>
-                                    <ListView>
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                    </ListView>
-                                </Flyout>
-                            </DropDownButton.Flyout>
-                        </DropDownButton>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="-"/>
-                        <AppBarButton VerticalAlignment="Center" Grid.Column="3" Icon="Delete" Height="36" Width="48" HorizontalAlignment="Right" Margin="0,0,0,0"/>
-                    </Grid>
+                <!--Break Line-->
+                <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                <!--Build Row Content-->
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Power Supply"/>
+                    <DropDownButton Content="Select" VerticalAlignment="Bottom" Grid.Column="1" Margin="0,0,0,3">
+                        <DropDownButton.Flyout>
+                            <Flyout>
+                                <ListView>
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                    <TextBlock Text="TEst" />
+                                </ListView>
+                            </Flyout>
+                        </DropDownButton.Flyout>
+                    </DropDownButton>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="-"/>
+                    <AppBarButton VerticalAlignment="Center" Grid.Column="3" Icon="Delete" Height="36" Width="48" HorizontalAlignment="Right" Margin="0,0,0,0"/>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
 
-                    <!--Break Line-->
-                    <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                    <!--Build Row Content-->
-                    <Grid Margin="0,0,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="2*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Power Supply"/>
-                        <DropDownButton Content="Select" VerticalAlignment="Bottom" Grid.Column="1" Margin="0,0,0,3">
-                            <DropDownButton.Flyout>
-                                <Flyout>
-                                    <ListView>
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                        <TextBlock Text="TEst" />
-                                    </ListView>
-                                </Flyout>
-                            </DropDownButton.Flyout>
-                        </DropDownButton>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="-"/>
-                        <AppBarButton VerticalAlignment="Center" Grid.Column="3" Icon="Delete" Height="36" Width="48" HorizontalAlignment="Right" Margin="0,0,0,0"/>
-                    </Grid>
-                </StackPanel>
-            </ScrollViewer>
-            
-            <!--Grid adds fade out to the content at the botton of content area-->
-            <Grid VerticalAlignment="Bottom" Height="15">
-                <Grid.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#7F3D3D3D" Offset="0.4"/>
-                        <GradientStop Color="#FF3D3D3D" Offset="0.933"/>
-                        <GradientStop Color="#003D3D3D" Offset="0"/>
-                        <GradientStop Color="#B73D3D3D" Offset="0.527"/>
-                        <GradientStop Color="#E13D3D3D" Offset="0.713"/>
-                        <GradientStop Color="#F93D3D3D" Offset="0.83"/>
-                    </LinearGradientBrush>
-                </Grid.Background>
-            </Grid>
+        <!--Grid adds fade out to the content at the botton of content area-->
+        <Grid VerticalAlignment="Bottom" Height="15">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#7F3D3D3D" Offset="0.4"/>
+                    <GradientStop Color="#FF3D3D3D" Offset="0.933"/>
+                    <GradientStop Color="#003D3D3D" Offset="0"/>
+                    <GradientStop Color="#B73D3D3D" Offset="0.527"/>
+                    <GradientStop Color="#E13D3D3D" Offset="0.713"/>
+                    <GradientStop Color="#F93D3D3D" Offset="0.83"/>
+                </LinearGradientBrush>
+            </Grid.Background>
         </Grid>
     </Grid>
 </Page>

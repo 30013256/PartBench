@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml.Shapes;
 
@@ -46,83 +47,59 @@ namespace PartBench
             titleBar.ButtonPressedBackgroundColor = Windows.UI.Color.FromArgb(50, 255, 255, 255);
             titleBar.ButtonInactiveBackgroundColor = Windows.UI.Color.FromArgb(0, 255, 255, 255);
 
+            ContentContainer.Navigate(typeof(HomePage));
+
             sel();
         }
-        
+
         public async void sel()
         {
             await Task.Delay(10);
             NavItemHome.IsSelected = true;
         }
 
-        #region Page Specific Nav
-        private void btnVeiwBuildGuides_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(BuildGuidePage));
-        }
-
-        private void btnBugetAmdGuide_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(FirstBuild));
-        }
-
-        private void btnHighEndIntelGuide_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(ThirdBuild));
-        }
-
-        private void btnVeiwBuilds_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(BuildsPage));
-        }
-
-        private void btnBeginBuilding_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(BuildEditorPage));
-        }
-        #endregion
 
         #region Nav Items
         private void NavView_BackRequested(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewBackRequestedEventArgs args)
         {
-            if (this.Frame.CanGoBack == true)
+            if (ContentContainer.CanGoBack == true)
             {
-                this.Frame.GoBack();
+                ContentContainer.GoBack();
             }
         }
         private void NavItemHome_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
+            ContentContainer.Navigate(typeof(HomePage));
         }
 
         private void NavItemFAQPage_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FAQPage));
+            ContentContainer.Navigate(typeof(FAQPage));
         }
 
         private void NavItemBuilds_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(BuildsPage));
+            ContentContainer.Navigate(typeof(BuildsPage), null, new SuppressNavigationTransitionInfo());
         }
 
         private void NavItemBuildGuidePage_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(BuildGuidePage));
+            ContentContainer.Navigate(typeof(BuildGuidePage));
         }
         
         private void NavItemForumsPage_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(ForumsPage));
+            ContentContainer.Navigate(typeof(ForumsPage));
         }
 
         private void NavItemPricePerformance_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(PricePerformancePage));
+            ContentContainer.Navigate(typeof(PricePerformancePage));
         }
 
         private void NavItemBenchmark_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(BenchmarkPage));
+            ContentContainer.Navigate(typeof(BenchmarkPage));
         }
         #endregion
 

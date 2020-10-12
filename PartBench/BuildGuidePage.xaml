@@ -9,98 +9,56 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Page.Resources>
-        <Thickness x:Key="NavigationViewHeaderMargin">50,50</Thickness>
-    </Page.Resources>
-    
-    
 
-    <Grid>
-        <!--Rows Title Bar | Everything Else-->
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
 
-        <!--Nav Bar | Left-->
-        <muxc:NavigationView CompactModeThresholdWidth="0" Header="Build Guides" Background="#3d3d3d" x:Name="NavView" Grid.RowSpan="2" IsTitleBarAutoPaddingEnabled="False" IsBackEnabled="True" BackRequested="NavView_BackRequested" OpenPaneLength="300" PaneClosing="NavView_PaneClosing" PaneOpening="NavView_PaneOpening">
-            <muxc:NavigationView.MenuItems>
-                <muxc:NavigationViewItem x:Name="NavItemHome" Tag="Home" Icon="Home" Content="Home" Tapped="NavItemHome_Tapped"/>
-                <muxc:NavigationViewItemSeparator/>
-                <muxc:NavigationViewItemHeader Content="Builds"/>
-                <muxc:NavigationViewItem x:Name="NavItemBuilds" Tag="Home" Icon="Repair" Content="System Builds" Tapped="NavItemBuilds_Tapped"/>
-                <muxc:NavigationViewItem x:Name="NavItemBuildGuide" Tag="Home" Icon="Keyboard" Content="System Build Guides" Tapped="NavItemBuildGuidePage_Tapped"/>
-                <muxc:NavigationViewItemSeparator/>
-                <muxc:NavigationViewItemHeader Content="Performance"/>
-                <muxc:NavigationViewItem x:Name="NavItemPricePerformance" Tag="Home" Icon="FourBars" Content="Price / Performance" Tapped="NavItemPricePerformance_Tapped"/>
-                <muxc:NavigationViewItem x:Name="NavItemBenchmark" Tag="Home" Icon="GoToStart" Content="Benchmarks" Tapped="NavItemBenchmark_Tapped"/>
-                <muxc:NavigationViewItemSeparator/>
-                <muxc:NavigationViewItemHeader Content="Other"/>
-                <muxc:NavigationViewItem x:Name="NavItemFAQPage" Tag="FAQ/About" Icon="Edit" Content="FAQ / About" Tapped="NavItemFAQPage_Tapped"/>
-                <muxc:NavigationViewItem x:Name="NavItemForumsPage" Tag="Forums" Icon="Emoji2" Content="Forums" Tapped="NavItemForumsPage_Tapped"/>
-            </muxc:NavigationView.MenuItems>
-        </muxc:NavigationView>
+    <!--Content Area - Margin.Left Expaned View 330 Colapsed View 90-->
+    <Grid Background="#3d3d3d">
+        <!--All content inside is scrollable-->
+        <ScrollViewer Margin="0,30,-20,0">
+            <!--List Of builds-->
+            <VariableSizedWrapGrid Orientation="Horizontal">
+                <Button Height="300" Width="250" Background="#e4e4e4" Padding="0" Margin="30" Click="Btn_Click1">
+                    <Grid Height="300" Width="250">
+                        <Image Source="Assets/sample.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,20,0,0"></Image>
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,45" FontWeight="Bold" >Budget AMD Build Guide</TextBlock>
+                    </Grid>
+                </Button>
 
-        <!--Title bar set as draggable area-->
-        <Grid x:Name="AppTitleBar" Background="Transparent" Margin="50,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition x:Name="LeftPaddingColumn" Width="0"/>
-                <ColumnDefinition/>
-                <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
-            </Grid.ColumnDefinitions>
-            <!--Logo-->
-            <Image Grid.Column="1" Source="/Assets/PBLogo.png" Height="24" Margin="40,10,0,0" HorizontalAlignment="Left"/>
-        </Grid>
+                <Button Height="300" Width="250" Background="#e4e4e4" Padding="0" Click="Btn_Click2" Margin="30">
+                    <Grid Height="300" Width="250">
+                        <Image Source="Assets/sample2.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,20,0,0"></Image>
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,45" FontWeight="Bold" >Budget Intel Build Guide</TextBlock>
+                    </Grid>
+                </Button>
 
-        <!--Content Area - Margin.Left Expaned View 330 Colapsed View 90-->
-        <Grid Grid.Row="1" x:Name="ContentContainer"  Margin="350,50,20,20">
-            <!--All content inside is scrollable-->
-            <ScrollViewer Margin="0,30,-20,0">
-                <!--List Of builds-->
-                <VariableSizedWrapGrid Orientation="Horizontal">
-                    <Button Height="300" Width="250" Background="#e4e4e4" Padding="0" Margin="30" Click="Btn_Click1">
-                        <Grid Height="300" Width="250">
-                            <Image Source="Assets/sample.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,20,0,0"></Image>
-                            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,45" FontWeight="Bold" >Budget AMD Build Guide</TextBlock>
-                        </Grid>
-                    </Button>
-                    
-                    <Button Height="300" Width="250" Background="#e4e4e4" Padding="0" Click="Btn_Click2" Margin="30">
-                        <Grid Height="300" Width="250">
-                            <Image Source="Assets/sample2.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,20,0,0"></Image>
-                            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,45" FontWeight="Bold" >Budget Intel Build Guide</TextBlock>
-                        </Grid>
-                    </Button>
-                    
-                    <Button Height="300" Width="250" Background="#e4e4e4" Padding="0" Click="Btn_Click3" Margin="30">
-                        <Grid Height="300" Width="250">
-                            <Image Source="Assets/sample3.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,20,0,0"></Image>
-                            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" FontWeight="Bold" >High-End Intel Build Guide</TextBlock>
-                        </Grid>
-                    </Button>
-                    
-                    <Button Height="300" Width="250" Background="#e4e4e4" Padding="0" Click="Btn_Click4" Margin="30">
-                        <Grid Height="300" Width="250">
-                            <Image Source="Assets/sample4.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,20,0,0"></Image>
-                            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" FontWeight="Bold" >High-End AMD Build Guide</TextBlock>
-                        </Grid>
-                    </Button>
-                </VariableSizedWrapGrid>
-            </ScrollViewer>
+                <Button Height="300" Width="250" Background="#e4e4e4" Padding="0" Click="Btn_Click3" Margin="30">
+                    <Grid Height="300" Width="250">
+                        <Image Source="Assets/sample3.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,20,0,0"></Image>
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" FontWeight="Bold" >High-End Intel Build Guide</TextBlock>
+                    </Grid>
+                </Button>
 
-            <!--Grid adds fade out to the content at the botton of content area-->
-            <Grid VerticalAlignment="Bottom" Height="15">
-                <Grid.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#7F3D3D3D" Offset="0.4"/>
-                        <GradientStop Color="#FF3D3D3D" Offset="0.933"/>
-                        <GradientStop Color="#003D3D3D" Offset="0"/>
-                        <GradientStop Color="#B73D3D3D" Offset="0.527"/>
-                        <GradientStop Color="#E13D3D3D" Offset="0.713"/>
-                        <GradientStop Color="#F93D3D3D" Offset="0.83"/>
-                    </LinearGradientBrush>
-                </Grid.Background>
-            </Grid>
+                <Button Height="300" Width="250" Background="#e4e4e4" Padding="0" Click="Btn_Click4" Margin="30">
+                    <Grid Height="300" Width="250">
+                        <Image Source="Assets/sample4.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,20,0,0"></Image>
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" FontWeight="Bold" >High-End AMD Build Guide</TextBlock>
+                    </Grid>
+                </Button>
+            </VariableSizedWrapGrid>
+        </ScrollViewer>
+
+        <!--Grid adds fade out to the content at the botton of content area-->
+        <Grid VerticalAlignment="Bottom" Height="15">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#7F3D3D3D" Offset="0.4"/>
+                    <GradientStop Color="#FF3D3D3D" Offset="0.933"/>
+                    <GradientStop Color="#003D3D3D" Offset="0"/>
+                    <GradientStop Color="#B73D3D3D" Offset="0.527"/>
+                    <GradientStop Color="#E13D3D3D" Offset="0.713"/>
+                    <GradientStop Color="#F93D3D3D" Offset="0.83"/>
+                </LinearGradientBrush>
+            </Grid.Background>
         </Grid>
     </Grid>
 </Page>

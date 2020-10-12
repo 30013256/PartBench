@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -21,19 +20,38 @@ namespace PartBench
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class BuildsPage : Page
+    public sealed partial class HomePage : Page
     {
-        public BuildsPage()
+        public HomePage()
         {
             this.InitializeComponent();
         }
 
         #region Page Specific Nav
-        private void btnEditBuild_Click(object sender, RoutedEventArgs e)
+        private void btnVeiwBuildGuides_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BuildGuidePage));
+        }
+
+        private void btnBugetAmdGuide_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(FirstBuild));
+        }
+
+        private void btnHighEndIntelGuide_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ThirdBuild));
+        }
+
+        private void btnVeiwBuilds_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BuildsPage));
+        }
+
+        private void btnBeginBuilding_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(BuildEditorPage));
         }
-        #endregion  
+        #endregion
     }
 }
-

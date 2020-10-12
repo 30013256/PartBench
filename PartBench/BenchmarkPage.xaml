@@ -9,225 +9,182 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <!--Margin for page header-->
-    <Page.Resources>
-        <Thickness x:Key="NavigationViewHeaderMargin">50,50</Thickness>
-    </Page.Resources>
-
-    <Grid>
-        <!--Rows Title Bar | Everything Else-->
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-
-        <!--Nav Bar | Left-->
-        <muxc:NavigationView CompactModeThresholdWidth="0" Header="Benchmarks" Background="#3d3d3d" x:Name="NavView" Grid.RowSpan="2" IsTitleBarAutoPaddingEnabled="False" IsBackEnabled="True" BackRequested="NavView_BackRequested" OpenPaneLength="300" PaneClosing="NavView_PaneClosing" PaneOpening="NavView_PaneOpening">
-            <muxc:NavigationView.MenuItems>
-                <muxc:NavigationViewItem x:Name="NavItemHome" Tag="Home" Icon="Home" Content="Home" Tapped="NavItemHome_Tapped"/>
-                <muxc:NavigationViewItemSeparator/>
-                <muxc:NavigationViewItemHeader Content="Builds"/>
-                <muxc:NavigationViewItem x:Name="NavItemBuilds" Tag="Home" Icon="Repair" Content="System Builds" Tapped="NavItemBuilds_Tapped"/>
-                <muxc:NavigationViewItem x:Name="NavItemBuildGuide" Tag="Home" Icon="Keyboard" Content="System Build Guides" Tapped="NavItemBuildGuidePage_Tapped"/>
-                <muxc:NavigationViewItemSeparator/>
-                <muxc:NavigationViewItemHeader Content="Performance"/>
-                <muxc:NavigationViewItem x:Name="NavItemPricePerformance" Tag="Home" Icon="FourBars" Content="Price / Performance" Tapped="NavItemPricePerformance_Tapped"/>
-                <muxc:NavigationViewItem x:Name="NavItemBenchmark" Tag="Home" Icon="GoToStart" Content="Benchmarks" Tapped="NavItemBenchmark_Tapped"/>
-                <muxc:NavigationViewItemSeparator/>
-                <muxc:NavigationViewItemHeader Content="Other"/>
-                <muxc:NavigationViewItem x:Name="NavItemFAQPage" Tag="FAQ/About" Icon="Edit" Content="FAQ / About" Tapped="NavItemFAQPage_Tapped"/>
-                <muxc:NavigationViewItem x:Name="NavItemForumsPage" Tag="Forums" Icon="Emoji2" Content="Forums" Tapped="NavItemForumsPage_Tapped"/>
-            </muxc:NavigationView.MenuItems>
-        </muxc:NavigationView>
-
-        <!--Title bar set as draggable area-->
-        <Grid x:Name="AppTitleBar" Background="Transparent" Margin="50,0">
+    <!--Content Area - Margin.Left Expaned View 330 Colapsed View 90-->
+    <Grid Background="#3d3d3d">
+        <!--Column Descriptions-->
+        <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition x:Name="LeftPaddingColumn" Width="0"/>
-                <ColumnDefinition/>
-                <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <!--Logo-->
-            <Image Grid.Column="1" Source="/Assets/PBLogo.png" Height="24" Margin="40,10,0,0" HorizontalAlignment="Left"/>
+            <TextBlock Grid.Column="0" Text="Build Specs" />
+            <TextBlock Grid.Column="1" Text="CPU"/>
+            <TextBlock Grid.Column="2" Text="GPU"/>
         </Grid>
 
-        <!--Content Area - Margin.Left Expaned View 330 Colapsed View 90-->
-        <Grid Grid.Row="1" x:Name="ContentContainer"  Margin="350,50,20,20">
-            <!--Column Descriptions-->
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Build Specs" />
-                <TextBlock Grid.Column="1" Text="CPU"/>
-                <TextBlock Grid.Column="2" Text="GPU"/>
-            </Grid>
-            
-            <!--All content inside is scrollable-->
-            <ScrollViewer Margin="0,30,-20,0">
-                <!--List Of builds-->
-                <StackPanel Grid.Row="1" Margin="0,0,20,0">
-                    <!--Build Row Content-->
-                    <Grid Margin="0,0,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="Ryzen 5 3600"   />
-                        <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="GTX 1070"/>
-                    </Grid>
+        <!--All content inside is scrollable-->
+        <ScrollViewer Margin="0,30,-20,0">
+            <!--List Of builds-->
+            <StackPanel Grid.Row="1" Margin="0,0,20,0">
+                <!--Build Row Content-->
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="Ryzen 5 3600"   />
+                    <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="GTX 1070"/>
+                </Grid>
 
-                    <!--Break Line-->
-                    <Line Margin="0,20,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                    <!--Build Row Content-->
-                    <Grid Margin="0,0,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Fortnite" Margin="0,10,0,0"/>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="AVG FPS" Margin="0,10,0,0"/>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="1% Low FPS" Margin="0,10,0,0"/>
-                    </Grid>
-                    
-                    <!--Build Row Content-->
-                    <Grid Margin="0,0,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                        </Grid.ColumnDefinitions>
-                        <Image Source="Assets/badgame.png" Height="100px" Width="180px" HorizontalAlignment="Left" Margin="0,10,0,0"/>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="120"/>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="70"/>
-                    </Grid>
+                <!--Break Line-->
+                <Line Margin="0,20,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                <!--Build Row Content-->
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Fortnite" Margin="0,10,0,0"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="AVG FPS" Margin="0,10,0,0"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="1% Low FPS" Margin="0,10,0,0"/>
+                </Grid>
 
-                    <!--Break Line-->
-                    <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                    <!--Build Row Content-->
-                    <Grid Margin="0,0,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="CSGO" Margin="0,10,0,0"/>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="AVG FPS" Margin="0,10,0,0"/>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="1% Low FPS" Margin="0,10,0,0"/>
-                    </Grid>
-                    
-                    <!--Build Row Content-->
-                    <Grid Margin="0,0,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                        </Grid.ColumnDefinitions>
-                        <Image Source="Assets/csgo.png" Height="100px" Width="180px" HorizontalAlignment="Left" Margin="0,5,0,0" />
-                        <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="350"/>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="220"/>
-                    </Grid>
+                <!--Build Row Content-->
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="Assets/badgame.png" Height="100px" Width="180px" HorizontalAlignment="Left" Margin="0,10,0,0"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="120"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="70"/>
+                </Grid>
 
-                    <!--Break Line-->
-                    <Line Margin="0,8.5,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                    <!--Build Row Content-->
-                    <Grid Margin="0,0,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Witcher 3" Margin="0,10,0,0"/>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="AVG FPS" Margin="0,10,0,0"/>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="1% Low FPS" Margin="0,10,0,0"/>
-                    </Grid>
-                    
-                    <!--Build Row Content-->
-                    <Grid Margin="0,0,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                        </Grid.ColumnDefinitions>
-                        <Image Source="Assets/witcher3.png" Height="100px" Width="180px" HorizontalAlignment="Left" Margin="0,5,0,0"/>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="90"/>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="60"/>
-                    </Grid>
+                <!--Break Line-->
+                <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                <!--Build Row Content-->
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="CSGO" Margin="0,10,0,0"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="AVG FPS" Margin="0,10,0,0"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="1% Low FPS" Margin="0,10,0,0"/>
+                </Grid>
 
-                    <!--Break Line-->
-                    <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                    <!--Build Row Content-->
-                    <Grid Margin="0,0,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Battlefield 4" Margin="0,10,0,0"/>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="AVG FPS" Margin="0,10,0,0"/>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="1% Low FPS" Margin="0,10,0,0"/>
-                    </Grid>
-                    
-                    <!--Build Row Content-->
-                    <Grid Margin="0,0,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                        </Grid.ColumnDefinitions>
-                        <Image Source="Assets/BF4.png" Height="100px" HorizontalAlignment="Left" Margin="0,5,0,0"/>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="200"/>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="150"/>
-                    </Grid>
+                <!--Build Row Content-->
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="Assets/csgo.png" Height="100px" Width="180px" HorizontalAlignment="Left" Margin="0,5,0,0" />
+                    <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="350"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="220"/>
+                </Grid>
 
-                    <!--Break Line-->
-                    <Line Margin="0,8.5,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                    <!--Build Row Content-->
-                    <Grid Margin="0,0,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Minecraft" Margin="0,10,0,0"/>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="AVG FPS" Margin="0,10,0,0"/>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="1% Low FPS" Margin="0,10,0,0"/>
-                    </Grid>
-                    
-                    <!--Build Row Content-->
-                    <Grid Margin="0,0,0,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                        </Grid.ColumnDefinitions>
-                        <Image Source="Assets/minecraft.png" Height="100px" HorizontalAlignment="Left" Margin="0,5,0,0"/>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="300"/>
-                        <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="100"/>
-                    </Grid>
+                <!--Break Line-->
+                <Line Margin="0,8.5,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                <!--Build Row Content-->
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Witcher 3" Margin="0,10,0,0"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="AVG FPS" Margin="0,10,0,0"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="1% Low FPS" Margin="0,10,0,0"/>
+                </Grid>
 
-                    <!--Break Line-->
-                    <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                </StackPanel>
-            </ScrollViewer>
+                <!--Build Row Content-->
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="Assets/witcher3.png" Height="100px" Width="180px" HorizontalAlignment="Left" Margin="0,5,0,0"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="90"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="60"/>
+                </Grid>
 
-            <!--Grid adds fade out to the content at the botton of content area-->
-            <Grid VerticalAlignment="Bottom" Height="15">
-                <Grid.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#7F3D3D3D" Offset="0.4"/>
-                        <GradientStop Color="#FF3D3D3D" Offset="0.933"/>
-                        <GradientStop Color="#003D3D3D" Offset="0"/>
-                        <GradientStop Color="#B73D3D3D" Offset="0.527"/>
-                        <GradientStop Color="#E13D3D3D" Offset="0.713"/>
-                        <GradientStop Color="#F93D3D3D" Offset="0.83"/>
-                    </LinearGradientBrush>
-                </Grid.Background>
-            </Grid>
+                <!--Break Line-->
+                <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                <!--Build Row Content-->
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Battlefield 4" Margin="0,10,0,0"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="AVG FPS" Margin="0,10,0,0"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="1% Low FPS" Margin="0,10,0,0"/>
+                </Grid>
+
+                <!--Build Row Content-->
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="Assets/BF4.png" Height="100px" HorizontalAlignment="Left" Margin="0,5,0,0"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="200"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="150"/>
+                </Grid>
+
+                <!--Break Line-->
+                <Line Margin="0,8.5,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                <!--Build Row Content-->
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="0" Text="Minecraft" Margin="0,10,0,0"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="AVG FPS" Margin="0,10,0,0"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="1% Low FPS" Margin="0,10,0,0"/>
+                </Grid>
+
+                <!--Build Row Content-->
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="Assets/minecraft.png" Height="100px" HorizontalAlignment="Left" Margin="0,5,0,0"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="1" Text="300"/>
+                    <TextBlock VerticalAlignment="Center" Grid.Column="2" Text="100"/>
+                </Grid>
+
+                <!--Break Line-->
+                <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!--Grid adds fade out to the content at the botton of content area-->
+        <Grid VerticalAlignment="Bottom" Height="15">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#7F3D3D3D" Offset="0.4"/>
+                    <GradientStop Color="#FF3D3D3D" Offset="0.933"/>
+                    <GradientStop Color="#003D3D3D" Offset="0"/>
+                    <GradientStop Color="#B73D3D3D" Offset="0.527"/>
+                    <GradientStop Color="#E13D3D3D" Offset="0.713"/>
+                    <GradientStop Color="#F93D3D3D" Offset="0.83"/>
+                </LinearGradientBrush>
+            </Grid.Background>
         </Grid>
     </Grid>
 </Page>
