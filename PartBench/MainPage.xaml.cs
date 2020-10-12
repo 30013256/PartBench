@@ -103,20 +103,23 @@ namespace PartBench
         }
         #endregion
 
-        #region Resize Content area on pane state
-        private void NavView_PaneClosing(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewPaneClosingEventArgs args)
-        {
-            Thickness margin = ContentContainer.Margin;
-            margin.Left = 90;
-            ContentContainer.Margin = margin;
-        }
+        //#region Resize Content area on pane state
+        //private void NavView_PaneClosing(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewPaneClosingEventArgs args)
+        //{
+        //    Thickness margin = ContentContainer.Margin;
+        //    margin.Left = 90;
+        //    ContentContainer.Margin = margin;
+        //}
 
-        private void NavView_PaneOpening(Microsoft.UI.Xaml.Controls.NavigationView sender, object args)
-        {
-            Thickness margin = ContentContainer.Margin;
-            margin.Left = 350;
-            ContentContainer.Margin = margin;
-        }
-        #endregion     
+        //private void NavView_PaneOpening(Microsoft.UI.Xaml.Controls.NavigationView sender, object args)
+        //{
+        //    if(MainGrid.ActualWidth >= 1007)
+        //    {
+        //        Thickness margin = ContentContainer.Margin;
+        //        margin.Left = 350;
+        //        ContentContainer.Margin = margin;
+        //    }    
+        //}
+        //#endregion     
     }
 }
