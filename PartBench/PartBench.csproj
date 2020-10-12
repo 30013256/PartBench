@@ -119,6 +119,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ISubPage.cs" />
     <Compile Include="BenchmarkPage.xaml.cs">
       <DependentUpon>BenchmarkPage.xaml</DependentUpon>
     </Compile>
@@ -162,6 +163,7 @@
     <Compile Include="ThirdBuild.xaml.cs">
       <DependentUpon>ThirdBuild.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

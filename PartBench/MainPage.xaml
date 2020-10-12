@@ -11,18 +11,19 @@
 
     <!--Margin for page header-->
     <Page.Resources>
-        <Thickness x:Key="NavigationViewHeaderMargin">50,50</Thickness>
+        <Thickness x:Key="NavigationViewHeaderMargin">24,52,0,0</Thickness>
     </Page.Resources>
 
     <Grid x:Name="MainGrid">
         <!--Rows Title Bar | Everything Else-->
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="40"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
+
         <!--Nav Bar | Left-->
-        <muxc:NavigationView CompactModeThresholdWidth="0" Header="Home" Background="#3d3d3d" x:Name="NavView" Grid.RowSpan="2" IsTitleBarAutoPaddingEnabled="False" IsBackEnabled="True" BackRequested="NavView_BackRequested" OpenPaneLength="300">
+        <muxc:NavigationView x:Name="NavView" Header="{Binding Path=Content.Header, ElementName=ContentContainer}" PaneDisplayMode="Left" IsPaneOpen="False" CompactModeThresholdWidth="0"  Background="#3d3d3d"  Grid.RowSpan="2" IsTitleBarAutoPaddingEnabled="False" IsBackEnabled="True" BackRequested="NavView_BackRequested" OpenPaneLength="300">
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItem x:Name="NavItemHome" Tag="Home" Icon="Home" Content="Home" Tapped="NavItemHome_Tapped"/>
                 <muxc:NavigationViewItemSeparator/>
@@ -38,22 +39,17 @@
                 <muxc:NavigationViewItem x:Name="NavItemFAQPage" Tag="FAQ/About" Icon="Edit" Content="FAQ / About" Tapped="NavItemFAQPage_Tapped"/>
                 <muxc:NavigationViewItem x:Name="NavItemForumsPage" Tag="Forums" Icon="Emoji2" Content="Forums" Tapped="NavItemForumsPage_Tapped"/>
             </muxc:NavigationView.MenuItems>
-            <muxc:NavigationView.Content>
-                <Frame x:Name="ContentContainer" Margin="50,0"/>
-            </muxc:NavigationView.Content>
+            <muxc:NavigationView.PaneHeader>
+                <Image Grid.Column="1" Source="/Assets/PBLogo.png" Height="20" Margin="5,0,0,0" HorizontalAlignment="Left"/>
+            </muxc:NavigationView.PaneHeader>
+            <ScrollViewer>
+                <Frame x:Name="ContentContainer" Margin="24,0"/>
+            </ScrollViewer>
         </muxc:NavigationView>
 
         <!--Title bar set as draggable area-->
-        <Grid x:Name="AppTitleBar" Background="Transparent" Margin="50,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition x:Name="LeftPaddingColumn" Width="0"/>
-                <ColumnDefinition/>
-                <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
-            </Grid.ColumnDefinitions>
-            <!--Logo-->
-            <Image Grid.Column="1" Source="/Assets/PBLogo.png" Height="24" Margin="40,10,0,0" HorizontalAlignment="Left"/>
-        </Grid>
+        <Grid x:Name="AppTitleBar" Background="Transparent" Height="40" Margin="40,0" Grid.Row="0"/>
 
-       
+
     </Grid>
 </Page>

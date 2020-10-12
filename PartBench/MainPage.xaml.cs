@@ -19,13 +19,9 @@ using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml.Shapes;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace PartBench
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
         public MainPage()
@@ -56,8 +52,10 @@ namespace PartBench
         {
             await Task.Delay(10);
             NavItemHome.IsSelected = true;
+            
         }
 
+        
 
         #region Nav Items
         private void NavView_BackRequested(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewBackRequestedEventArgs args)
@@ -75,6 +73,7 @@ namespace PartBench
         private void NavItemFAQPage_Tapped(object sender, TappedRoutedEventArgs e)
         {
             ContentContainer.Navigate(typeof(FAQPage));
+            
         }
 
         private void NavItemBuilds_Tapped(object sender, TappedRoutedEventArgs e)
@@ -103,23 +102,5 @@ namespace PartBench
         }
         #endregion
 
-        //#region Resize Content area on pane state
-        //private void NavView_PaneClosing(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewPaneClosingEventArgs args)
-        //{
-        //    Thickness margin = ContentContainer.Margin;
-        //    margin.Left = 90;
-        //    ContentContainer.Margin = margin;
-        //}
-
-        //private void NavView_PaneOpening(Microsoft.UI.Xaml.Controls.NavigationView sender, object args)
-        //{
-        //    if(MainGrid.ActualWidth >= 1007)
-        //    {
-        //        Thickness margin = ContentContainer.Margin;
-        //        margin.Left = 350;
-        //        ContentContainer.Margin = margin;
-        //    }    
-        //}
-        //#endregion     
     }
 }
