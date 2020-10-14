@@ -28,6 +28,8 @@ namespace PartBench
             this.InitializeComponent();
         }
 
+        public string Header => "Builds";
+
         #region Page Specific Nav
         private void btnEditBuild_Click(object sender, RoutedEventArgs e)
         {

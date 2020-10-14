@@ -30,7 +30,8 @@ namespace PartBench
         {
             this.InitializeComponent();
         }
-        
+
+        public string Header => "Build Guides";
         #region Page Specific Nav
         private void Btn_Click1(object sender, RoutedEventArgs e)
         {

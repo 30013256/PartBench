@@ -28,5 +28,6 @@ namespace PartBench
         {
             this.InitializeComponent();
         }
+        public string Header => "Budget Intel Build Guide";
     }
 }

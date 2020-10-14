@@ -26,6 +26,8 @@ namespace PartBench
         {
             this.InitializeComponent();
         }
+
+        public string Header => "Build Editor";
     }
 }
 

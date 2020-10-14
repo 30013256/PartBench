@@ -28,6 +28,7 @@ namespace PartBench
         public FirstBuild()
         {
             this.InitializeComponent();                 
-        }       
+        }
+        public string Header => "Budget AMD Build Guide";
     }
 }

@@ -27,6 +27,7 @@ namespace PartBench
         {
             this.InitializeComponent();
         }
+        public string Header => "Price / Performance";
     }
 }
 

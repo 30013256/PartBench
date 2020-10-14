@@ -27,5 +27,6 @@ namespace PartBench
         {
             this.InitializeComponent();
         }
+        public string Header => "FAQ / About";
     }
 }
