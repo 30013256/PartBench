@@ -23,7 +23,16 @@
 
 
         <!--Nav Bar | Left-->
-        <muxc:NavigationView x:Name="NavView" Header="{Binding Path=Content.Header, ElementName=ContentContainer}" PaneDisplayMode="Left" IsPaneOpen="False" CompactModeThresholdWidth="0"  Background="#3d3d3d"  Grid.RowSpan="2" IsTitleBarAutoPaddingEnabled="False" IsBackEnabled="True" BackRequested="NavView_BackRequested" OpenPaneLength="300">
+        <muxc:NavigationView 
+            x:Name="NavView" 
+            Header="{Binding Path=Content.Header, ElementName=ContentContainer}" 
+            CompactModeThresholdWidth="0"  
+            Background="#3d3d3d"  
+            Grid.RowSpan="2" 
+            IsTitleBarAutoPaddingEnabled="False" 
+            IsBackEnabled="True" 
+            BackRequested="NavView_BackRequested">
+            
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItem x:Name="NavItemHome" Tag="Home" Icon="Home" Content="Home" Tapped="NavItemHome_Tapped"/>
                 <muxc:NavigationViewItemSeparator/>
@@ -42,9 +51,12 @@
             <muxc:NavigationView.PaneHeader>
                 <Image Grid.Column="1" Source="/Assets/PBLogo.png" Height="20" Margin="5,0,0,0" HorizontalAlignment="Left"/>
             </muxc:NavigationView.PaneHeader>
-            <ScrollViewer>
-                <Frame x:Name="ContentContainer" Margin="24,0"/>
-            </ScrollViewer>
+            <muxc:NavigationView.Content>
+                <ScrollViewer>
+                    <Frame x:Name="ContentContainer" Margin="24,0"/>
+                </ScrollViewer>
+            </muxc:NavigationView.Content>
+            
         </muxc:NavigationView>
 
         <!--Title bar set as draggable area-->

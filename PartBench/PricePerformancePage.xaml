@@ -9,199 +9,195 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <!--Content Area - Margin.Left Expaned View 350 Colapsed View 90-->
+    <!--Content Area - Margin.Left Expaned View 350 Colapsed View 90-->
     <Grid Background="#3d3d3d">
-        <Pivot Padding="-10,0,0,0">
-            <PivotItem Header="GPU" Margin="10,0,-10,0">
+        <Pivot>
+            <PivotItem Header="GPU">
                 <Grid>
-                    <!--Column Descriptions-->
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="4*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="Video Card"/>
-                        <TextBlock Grid.Column="1" Text="G3D Mark / Price"/>
-                        <TextBlock Grid.Column="2" Text="G3D Mark"/>
-                        <TextBlock Grid.Column="3" Text="Price"/>
-                    </Grid>
+                    <StackPanel>
+                        <!--Column Descriptions-->
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="Video Card"/>
+                            <TextBlock Grid.Column="1" Text="G3D Mark / Price"/>
+                            <TextBlock Grid.Column="2" Text="G3D Mark"/>
+                            <TextBlock Grid.Column="3" Text="Price"/>
+                        </Grid>
 
-                    <ScrollViewer Margin="0,30,-20,0">
-                        <StackPanel Margin="0,0,20,0">
-                            <!--Break Line-->
-                            <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                            <!--Column Content-->
-                            <Grid>
+                        <!--Break Line-->
+                        <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                        <!--Column Content-->
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="GeForce GTX 1650 SUPER"/>
+                            <Grid Grid.Column="1">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="3*"/>
-                                    <ColumnDefinition Width="3*"/>
-                                    <ColumnDefinition Width="1*"/>
-                                    <ColumnDefinition Width="1*"/>
-                                    <ColumnDefinition Width="1*"/>
+                                    <!--Sets Line Length-->
+                                    <ColumnDefinition Width="90*"/>
+                                    <ColumnDefinition Width="10*"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Grid.Column="0" Text="GeForce GTX 1650 SUPER"/>
-                                <Grid Grid.Column="1">
-                                    <Grid.ColumnDefinitions>
-                                        <!--Sets Line Length-->
-                                        <ColumnDefinition Width="90*"/>
-                                        <ColumnDefinition Width="10*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Line X1="9999"  StrokeThickness="7" Stroke="Red" VerticalAlignment="Center"/>
-                                </Grid>
-                                <TextBlock Grid.Column="2" Text="61.4"/>
-                                <TextBlock Grid.Column="3" Text="9824"/>
-                                <TextBlock Grid.Column="4" Text="159.99"/>
+                                <Line X1="9999"  StrokeThickness="7" Stroke="Red" VerticalAlignment="Center"/>
                             </Grid>
+                            <TextBlock Grid.Column="2" Text="61.4"/>
+                            <TextBlock Grid.Column="3" Text="9824"/>
+                            <TextBlock Grid.Column="4" Text="159.99"/>
+                        </Grid>
 
-                            <!--Break Line-->
-                            <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                            <!--Column Content-->
-                            <Grid>
+                        <!--Break Line-->
+                        <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                        <!--Column Content-->
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="GeForce RTX 2060"/>
+                            <Grid Grid.Column="1">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="3*"/>
-                                    <ColumnDefinition Width="3*"/>
-                                    <ColumnDefinition Width="1*"/>
-                                    <ColumnDefinition Width="1*"/>
-                                    <ColumnDefinition Width="1*"/>
+                                    <!--Sets Line Length-->
+                                    <ColumnDefinition Width="50*"/>
+                                    <ColumnDefinition Width="50*"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Grid.Column="0" Text="GeForce RTX 2060"/>
-                                <Grid Grid.Column="1">
-                                    <Grid.ColumnDefinitions>
-                                        <!--Sets Line Length-->
-                                        <ColumnDefinition Width="50*"/>
-                                        <ColumnDefinition Width="50*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Line X1="9999"  StrokeThickness="7" Stroke="Yellow" VerticalAlignment="Center"/>
-                                </Grid>
-                                <TextBlock Grid.Column="2" Text="39.7"/>
-                                <TextBlock Grid.Column="3" Text="16294"/>
-                                <TextBlock Grid.Column="4" Text="409.99"/>
+                                <Line X1="9999"  StrokeThickness="7" Stroke="Yellow" VerticalAlignment="Center"/>
                             </Grid>
+                            <TextBlock Grid.Column="2" Text="39.7"/>
+                            <TextBlock Grid.Column="3" Text="16294"/>
+                            <TextBlock Grid.Column="4" Text="409.99"/>
+                        </Grid>
 
-                            <!--Break Line-->
-                            <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                            <!--Column Content-->
-                            <Grid>
+                        <!--Break Line-->
+                        <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                        <!--Column Content-->
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="GeForce RTX 2080 Ti"/>
+                            <Grid Grid.Column="1">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="3*"/>
-                                    <ColumnDefinition Width="3*"/>
-                                    <ColumnDefinition Width="1*"/>
-                                    <ColumnDefinition Width="1*"/>
-                                    <ColumnDefinition Width="1*"/>
+                                    <!--Sets Line Length-->
+                                    <ColumnDefinition Width="30*"/>
+                                    <ColumnDefinition Width="70*"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Grid.Column="0" Text="GeForce RTX 2080 Ti"/>
-                                <Grid Grid.Column="1">
-                                    <Grid.ColumnDefinitions>
-                                        <!--Sets Line Length-->
-                                        <ColumnDefinition Width="30*"/>
-                                        <ColumnDefinition Width="70*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Line X1="9999"  StrokeThickness="7" Stroke="Orange" VerticalAlignment="Center"/>
-                                </Grid>
-                                <TextBlock Grid.Column="2" Text="19.8"/>
-                                <TextBlock Grid.Column="3" Text="21565"/>
-                                <TextBlock Grid.Column="4" Text="1089.99"/>
+                                <Line X1="9999"  StrokeThickness="7" Stroke="Orange" VerticalAlignment="Center"/>
                             </Grid>
-                        </StackPanel>
-                    </ScrollViewer>
+                            <TextBlock Grid.Column="2" Text="19.8"/>
+                            <TextBlock Grid.Column="3" Text="21565"/>
+                            <TextBlock Grid.Column="4" Text="1089.99"/>
+                        </Grid>
+                    </StackPanel>
                 </Grid>
             </PivotItem>
             <PivotItem Header="CPU">
                 <Grid>
-                    <!--Column Descriptions-->
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="4*"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="CPU"/>
-                        <TextBlock Grid.Column="1" Text="CPU Value (Mark/Price)"/>
-                        <TextBlock Grid.Column="2" Text="CPU Mark"/>
-                        <TextBlock Grid.Column="3" Text="Price"/>
-                    </Grid>
+                    <StackPanel>
+                        <!--Column Descriptions-->
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="CPU"/>
+                            <TextBlock Grid.Column="1" Text="CPU Value (Mark/Price)"/>
+                            <TextBlock Grid.Column="2" Text="CPU Mark"/>
+                            <TextBlock Grid.Column="3" Text="Price"/>
+                        </Grid>
 
-                    <ScrollViewer Margin="0,30,-20,0">
-                        <StackPanel Margin="0,0,20,0">
-                            <!--Break Line-->
-                            <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                            <!--Column Content-->
-                            <Grid>
+                        <!--Break Line-->
+                        <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                        <!--Column Content-->
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="AMD Ryzen 5 3600"/>
+                            <Grid Grid.Column="1">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="3*"/>
-                                    <ColumnDefinition Width="3*"/>
-                                    <ColumnDefinition Width="1*"/>
-                                    <ColumnDefinition Width="1*"/>
-                                    <ColumnDefinition Width="1*"/>
+                                    <!--Sets Line Length-->
+                                    <ColumnDefinition Width="90*"/>
+                                    <ColumnDefinition Width="10*"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Grid.Column="0" Text="AMD Ryzen 5 3600"/>
-                                <Grid Grid.Column="1">
-                                    <Grid.ColumnDefinitions>
-                                        <!--Sets Line Length-->
-                                        <ColumnDefinition Width="90*"/>
-                                        <ColumnDefinition Width="10*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Line X1="9999"  StrokeThickness="7" Stroke="LimeGreen" VerticalAlignment="Center"/>
-                                </Grid>
-                                <TextBlock Grid.Column="2" Text="99.1"/>
-                                <TextBlock Grid.Column="3" Text="17836"/>
-                                <TextBlock Grid.Column="4" Text="179.99"/>
+                                <Line X1="9999"  StrokeThickness="7" Stroke="LimeGreen" VerticalAlignment="Center"/>
                             </Grid>
+                            <TextBlock Grid.Column="2" Text="99.1"/>
+                            <TextBlock Grid.Column="3" Text="17836"/>
+                            <TextBlock Grid.Column="4" Text="179.99"/>
+                        </Grid>
 
-                            <!--Break Line-->
-                            <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                            <!--Column Content-->
-                            <Grid>
+                        <!--Break Line-->
+                        <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                        <!--Column Content-->
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock TextWrapping="Wrap" Grid.Column="0" Text="Intel Core i5-9600K @ 3.70GHz"/>
+                            <Grid Grid.Column="1">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="3*"/>
-                                    <ColumnDefinition Width="3*"/>
-                                    <ColumnDefinition Width="1*"/>
-                                    <ColumnDefinition Width="1*"/>
-                                    <ColumnDefinition Width="1*"/>
+                                    <!--Sets Line Length-->
+                                    <ColumnDefinition Width="50*"/>
+                                    <ColumnDefinition Width="50*"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock TextWrapping="Wrap" Grid.Column="0" Text="Intel Core i5-9600K @ 3.70GHz"/>
-                                <Grid Grid.Column="1">
-                                    <Grid.ColumnDefinitions>
-                                        <!--Sets Line Length-->
-                                        <ColumnDefinition Width="50*"/>
-                                        <ColumnDefinition Width="50*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Line X1="9999"  StrokeThickness="7" Stroke="LightBlue" VerticalAlignment="Center"/>
-                                </Grid>
-                                <TextBlock Grid.Column="2" Text="56.5"/>
-                                <TextBlock Grid.Column="3" Text="10897"/>
-                                <TextBlock Grid.Column="4" Text="192.99"/>
+                                <Line X1="9999"  StrokeThickness="7" Stroke="LightBlue" VerticalAlignment="Center"/>
                             </Grid>
+                            <TextBlock Grid.Column="2" Text="56.5"/>
+                            <TextBlock Grid.Column="3" Text="10897"/>
+                            <TextBlock Grid.Column="4" Text="192.99"/>
+                        </Grid>
 
-                            <!--Break Line-->
-                            <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                            <!--Column Content-->
-                            <Grid>
+                        <!--Break Line-->
+                        <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                        <!--Column Content-->
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="Intel Core i9-9900X @ 3.50GHz"/>
+                            <Grid Grid.Column="1">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="3*"/>
-                                    <ColumnDefinition Width="3*"/>
-                                    <ColumnDefinition Width="1*"/>
-                                    <ColumnDefinition Width="1*"/>
-                                    <ColumnDefinition Width="1*"/>
+                                    <!--Sets Line Length-->
+                                    <ColumnDefinition Width="30*"/>
+                                    <ColumnDefinition Width="70*"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Grid.Column="0" Text="Intel Core i9-9900X @ 3.50GHz"/>
-                                <Grid Grid.Column="1">
-                                    <Grid.ColumnDefinitions>
-                                        <!--Sets Line Length-->
-                                        <ColumnDefinition Width="30*"/>
-                                        <ColumnDefinition Width="70*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Line X1="9999"  StrokeThickness="7" Stroke="DarkOrange" VerticalAlignment="Center"/>
-                                </Grid>
-                                <TextBlock Grid.Column="2" Text="36.4"/>
-                                <TextBlock Grid.Column="3" Text="21754"/>
-                                <TextBlock Grid.Column="4" Text="598.99"/>
+                                <Line X1="9999"  StrokeThickness="7" Stroke="DarkOrange" VerticalAlignment="Center"/>
                             </Grid>
-                        </StackPanel>
-                    </ScrollViewer>
+                            <TextBlock Grid.Column="2" Text="36.4"/>
+                            <TextBlock Grid.Column="3" Text="21754"/>
+                            <TextBlock Grid.Column="4" Text="598.99"/>
+                        </Grid>
+                    </StackPanel>
                 </Grid>
             </PivotItem>
         </Pivot>

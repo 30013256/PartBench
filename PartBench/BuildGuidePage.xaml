@@ -13,52 +13,35 @@
 
     <!--Content Area - Margin.Left Expaned View 330 Colapsed View 90-->
     <Grid Background="#3d3d3d">
-        <!--All content inside is scrollable-->
-        <ScrollViewer Margin="0,30,-20,0">
-            <!--List Of builds-->
-            <VariableSizedWrapGrid Orientation="Horizontal">
-                <Button Height="300" Width="250" Background="#e4e4e4" Padding="0" Margin="30" Click="Btn_Click1">
-                    <Grid Height="300" Width="250">
-                        <Image Source="Assets/sample.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,20,0,0"></Image>
-                        <TextBlock TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,45" FontWeight="Bold" >Budget AMD Build Guide</TextBlock>
-                    </Grid>
-                </Button>
+        <!--List Of builds-->
+        <VariableSizedWrapGrid Orientation="Horizontal">
+            <Button Height="300" Width="250" Background="#e4e4e4" Padding="0" Margin="30" Click="Btn_Click1">
+                <Grid Height="300" Width="250">
+                    <Image Source="Assets/sample.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,20,0,0"></Image>
+                    <TextBlock TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,45" FontWeight="Bold" >Budget AMD Build Guide</TextBlock>
+                </Grid>
+            </Button>
 
-                <Button Height="300" Width="250" Background="#e4e4e4" Padding="0" Click="Btn_Click2" Margin="30">
-                    <Grid Height="300" Width="250">
-                        <Image Source="Assets/sample2.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,20,0,0"></Image>
-                        <TextBlock TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,45" FontWeight="Bold" >Budget Intel Build Guide</TextBlock>
-                    </Grid>
-                </Button>
+            <Button Height="300" Width="250" Background="#e4e4e4" Padding="0" Click="Btn_Click2" Margin="30">
+                <Grid Height="300" Width="250">
+                    <Image Source="Assets/sample2.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,20,0,0"></Image>
+                    <TextBlock TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,45" FontWeight="Bold" >Budget Intel Build Guide</TextBlock>
+                </Grid>
+            </Button>
 
-                <Button Height="300" Width="250" Background="#e4e4e4" Padding="0" Click="Btn_Click3" Margin="30">
-                    <Grid Height="300" Width="250">
-                        <Image Source="Assets/sample3.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,20,0,0"></Image>
-                        <TextBlock TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" FontWeight="Bold" >High-End Intel Build Guide</TextBlock>
-                    </Grid>
-                </Button>
+            <Button Height="300" Width="250" Background="#e4e4e4" Padding="0" Click="Btn_Click3" Margin="30">
+                <Grid Height="300" Width="250">
+                    <Image Source="Assets/sample3.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,20,0,0"></Image>
+                    <TextBlock TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" FontWeight="Bold" >High-End Intel Build Guide</TextBlock>
+                </Grid>
+            </Button>
 
-                <Button Height="300" Width="250" Background="#e4e4e4" Padding="0" Click="Btn_Click4" Margin="30">
-                    <Grid Height="300" Width="250">
-                        <Image Source="Assets/sample4.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,20,0,0"></Image>
-                        <TextBlock TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" FontWeight="Bold" >High-End AMD Build Guide</TextBlock>
-                    </Grid>
-                </Button>
-            </VariableSizedWrapGrid>
-        </ScrollViewer>
-
-        <!--Grid adds fade out to the content at the botton of content area-->
-        <Grid VerticalAlignment="Bottom" Height="15">
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#7F3D3D3D" Offset="0.4"/>
-                    <GradientStop Color="#FF3D3D3D" Offset="0.933"/>
-                    <GradientStop Color="#003D3D3D" Offset="0"/>
-                    <GradientStop Color="#B73D3D3D" Offset="0.527"/>
-                    <GradientStop Color="#E13D3D3D" Offset="0.713"/>
-                    <GradientStop Color="#F93D3D3D" Offset="0.83"/>
-                </LinearGradientBrush>
-            </Grid.Background>
-        </Grid>
+            <Button Height="300" Width="250" Background="#e4e4e4" Padding="0" Click="Btn_Click4" Margin="30">
+                <Grid Height="300" Width="250">
+                    <Image Source="Assets/sample4.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,20,0,0"></Image>
+                    <TextBlock TextWrapping="Wrap" TextAlignment="Center" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" FontWeight="Bold" >High-End AMD Build Guide</TextBlock>
+                </Grid>
+            </Button>
+        </VariableSizedWrapGrid>
     </Grid>
 </Page>

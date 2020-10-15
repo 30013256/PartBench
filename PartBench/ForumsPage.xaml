@@ -9,249 +9,233 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <!--Content Area - Margin.Left Expaned View 350 Colapsed View 90-->
+    <!--Content Area - Margin.Left Expaned View 350 Colapsed View 90-->
     <Grid Background="#3d3d3d">
-        <!--All content inside is scrollable-->
-        <ScrollViewer Margin="0,30,-20,0">
-            <!--List Of builds-->
-            <StackPanel Margin="0,0,20,0">
-                <TextBlock Grid.Column="0" FontSize="18" Text="System"/>
-                <!--Break Line-->
-                <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                <!--Build Row Content-->
-                <Grid Margin="0,0,0,50">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="2*"/>
-                    </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Column="0">
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Forum"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Part Selection Opinion Needed"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Recommended builds?"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Troubleshooting"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Type of Computer"/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="1">
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Topics"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="2">
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Posts"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="3">
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Recent Topic/Post"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="1" Text="How does my first build look?"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Whats a good budget build?"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Computer won't boot, weird ticking sound in PSU"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Graphics Card making noise when experiencing high FPS"/>
-                    </StackPanel>
-                </Grid>
+        
+        <!--List Of builds-->
+        <StackPanel>
+            <TextBlock Grid.Column="0" FontSize="18" Text="System"/>
+            <!--Break Line-->
+            <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+            <!--Build Row Content-->
+            <Grid Margin="0,0,0,50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Forum"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Part Selection Opinion Needed"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Recommended builds?"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Troubleshooting"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Type of Computer"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Topics"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Posts"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                </StackPanel>
+                <StackPanel Grid.Column="3">
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Recent Topic/Post"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="1" Text="How does my first build look?"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Whats a good budget build?"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Computer won't boot, weird ticking sound in PSU"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Graphics Card making noise when experiencing high FPS"/>
+                </StackPanel>
+            </Grid>
 
-                <TextBlock Grid.Column="0" FontSize="18" Text="Hardware"/>
-                <!--Break Line-->
-                <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                <!--Build Row Content-->
-                <Grid Margin="0,0,0,50">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="2*"/>
-                    </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Column="0">
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="0" FontSize="12" Text="Forum"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="CPU's"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Coolers for CPU"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Motherboards"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Memory"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Storage"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Video Cards"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Cases"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Power Supplies"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Monitors"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Keyboards &amp; Mice"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Headphones"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Audio"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Networking"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Modding / DIY"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Other"/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="1">
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Topics"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="2">
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Posts"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="3">
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Recent Topic/Post"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Best price to performance intel CPU?"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="I need to stop my Ryzen Heate- CPU from overheating.. tips?"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="ASUS or Gigabyte? Or maybe something else"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Whats a good 32 GB DIMM Kit?"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Potential upgrades"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="GPU recommendations?"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="NZXT Case?"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="What is a comfortable wattage for a build?"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Looking for a 240Hz 1440p monitor."/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Best keyboard that will last a long time?"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Do I get HyperX headphones?"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="HS60 vs HS60 Pro"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Difference between CAT5 and CAT6"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Need assistance with custom cable sleeving"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Air cooler vs water cooler"/>
-                    </StackPanel>
-                </Grid>
+            <TextBlock Grid.Column="0" FontSize="18" Text="Hardware"/>
+            <!--Break Line-->
+            <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+            <!--Build Row Content-->
+            <Grid Margin="0,0,0,50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="0" FontSize="12" Text="Forum"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="CPU's"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Coolers for CPU"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Motherboards"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Memory"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Storage"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Video Cards"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Cases"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Power Supplies"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Monitors"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Keyboards &amp; Mice"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Headphones"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Audio"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Networking"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Modding / DIY"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Other"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Topics"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Posts"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                </StackPanel>
+                <StackPanel Grid.Column="3">
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Recent Topic/Post"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Best price to performance intel CPU?"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="I need to stop my Ryzen Heate- CPU from overheating.. tips?"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="ASUS or Gigabyte? Or maybe something else"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Whats a good 32 GB DIMM Kit?"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Potential upgrades"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="GPU recommendations?"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="NZXT Case?"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="What is a comfortable wattage for a build?"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Looking for a 240Hz 1440p monitor."/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Best keyboard that will last a long time?"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Do I get HyperX headphones?"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="HS60 vs HS60 Pro"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Difference between CAT5 and CAT6"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Need assistance with custom cable sleeving"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Air cooler vs water cooler"/>
+                </StackPanel>
+            </Grid>
 
-                <TextBlock Grid.Column="0" FontSize="18" Text="Software"/>
-                <!--Break Line-->
-                <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                <!--Build Row Content-->
-                <Grid Margin="0,0,0,50">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="2*"/>
-                    </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Column="0">
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Forum"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Anti-Virus | Anti-Malware | Security"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="General Software"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Operating Systems"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Games | Gaming"/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="1">
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Topics"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="2">
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Posts"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="3">
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Recent Topic/Post"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Does overclocking affect system security in anyway?"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Software for managing temps of system"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Does the windows 10 download still operate?"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Minecraft 60fps w/shaders build"/>
-                    </StackPanel>
-                </Grid>
+            <TextBlock Grid.Column="0" FontSize="18" Text="Software"/>
+            <!--Break Line-->
+            <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+            <!--Build Row Content-->
+            <Grid Margin="0,0,0,50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Forum"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Anti-Virus | Anti-Malware | Security"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="General Software"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Operating Systems"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Games | Gaming"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Topics"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Posts"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                </StackPanel>
+                <StackPanel Grid.Column="3">
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Recent Topic/Post"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Does overclocking affect system security in anyway?"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Software for managing temps of system"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Does the windows 10 download still operate?"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Minecraft 60fps w/shaders build"/>
+                </StackPanel>
+            </Grid>
 
-                <TextBlock Grid.Column="0" FontSize="18" Text="General"/>
-                <!--Break Line-->
-                <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                <!--Build Row Content-->
-                <Grid Margin="0,0,0,50">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="2*"/>
-                    </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Column="0">
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Forum"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Announcements | Application News"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Deals"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Request Part Additions | Corrections Here"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="For sale or trade"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="App feedback and feature requests"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="General Discussion"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Off topic"/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="1">
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Topics"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="2">
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Posts"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="3">
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Recent Topic/Post"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Comment deletions and voting"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Gigabyte RTX 2080 Super 8GB"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="ASUS TUF GAMING B550-PLUS (WI-FI)"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Ryzen 5 3600 + MSI B4501 Gaming Plus AC"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Skateboard parts builder"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="SSD question"/>
-                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Ceramic coating"/>
-                    </StackPanel>
-                </Grid>
-            </StackPanel>
-        </ScrollViewer>
-
-        <!--Grid adds fade out to the content at the botton of content area-->
-        <Grid VerticalAlignment="Bottom" Height="15">
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#7F3D3D3D" Offset="0.4"/>
-                    <GradientStop Color="#FF3D3D3D" Offset="0.933"/>
-                    <GradientStop Color="#003D3D3D" Offset="0"/>
-                    <GradientStop Color="#B73D3D3D" Offset="0.527"/>
-                    <GradientStop Color="#E13D3D3D" Offset="0.713"/>
-                    <GradientStop Color="#F93D3D3D" Offset="0.83"/>
-                </LinearGradientBrush>
-            </Grid.Background>
-        </Grid>
+            <TextBlock Grid.Column="0" FontSize="18" Text="General"/>
+            <!--Break Line-->
+            <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+            <!--Build Row Content-->
+            <Grid Margin="0,0,0,50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Forum"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Announcements | Application News"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Deals"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Request Part Additions | Corrections Here"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="For sale or trade"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="App feedback and feature requests"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="General Discussion"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Off topic"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Topics"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Posts"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                </StackPanel>
+                <StackPanel Grid.Column="3">
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Recent Topic/Post"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Comment deletions and voting"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Gigabyte RTX 2080 Super 8GB"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="ASUS TUF GAMING B550-PLUS (WI-FI)"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Ryzen 5 3600 + MSI B4501 Gaming Plus AC"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Skateboard parts builder"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="SSD question"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Ceramic coating"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
     </Grid>
 </Page>
 

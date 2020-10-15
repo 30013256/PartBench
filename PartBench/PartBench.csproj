@@ -163,7 +163,6 @@
     <Compile Include="ThirdBuild.xaml.cs">
       <DependentUpon>ThirdBuild.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

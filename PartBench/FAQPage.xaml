@@ -13,16 +13,15 @@
 
 
         <!--Content Area - Margin.Left Expaned View 350 Colapsed View 90-->
-        <Grid Background="#3d3d3d">
-            <ScrollViewer Margin="0,30,-20,0">
-                <StackPanel Margin="0,0,20,0">
-                    <TextBlock FontSize="42" Text="About"/>
-                    <!--Break Line-->
-                    <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                    <StackPanel Margin="0,0,0,20">
-                        <Grid Margin="0,0,0,20">
-                            <StackPanel>
-                                <TextBlock TextWrapping="Wrap" FontSize="17" Margin="0,0,0,20">Welcome to PartBench, 
+    <Grid Background="#3d3d3d">
+        <StackPanel>
+            <TextBlock FontSize="42" Text="About"/>
+            <!--Break Line-->
+            <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+            <StackPanel Margin="0,0,0,20">
+                <Grid Margin="0,0,0,20">
+                    <StackPanel>
+                        <TextBlock TextWrapping="Wrap" FontSize="17" Margin="0,0,0,20">Welcome to PartBench, 
                                     A small application developed by a team of three IT Students Blah blah blah now it's time for some lorem ipsum...
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                     Amet cursus sit amet dictum sit amet justo. Vestibulum lorem sed risus ultricies. 
@@ -33,8 +32,8 @@
                                     Euismod elementum nisi quis eleifend quam adipiscing. Vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus.
                                     Suspendisse interdum consectetur libero id faucibus. Arcu bibendum at varius vel. Tincidunt augue interdum velit euismod in pellentesque massa placerat.
                                     Id consectetur purus ut faucibus pulvinar elementum integer enim neque.
-                                </TextBlock>
-                                <TextBlock TextWrapping="Wrap" FontSize="17">
+                        </TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="17">
                                     Scelerisque varius morbi enim nunc faucibus a pellentesque sit amet.
                                     Dolor purus non enim praesent elementum facilisis leo vel. Bibendum enim facilisis gravida neque convallis. 
                                     Felis eget nunc lobortis mattis aliquam faucibus. Dui id ornare arcu odio ut sem nulla. 
@@ -45,48 +44,46 @@
                                     Orci sagittis eu volutpat odio facilisis mauris sit. Feugiat in ante metus dictum at. 
                                     Aliquam sem et tortor consequat id porta nibh. Ac turpis egestas sed tempus urna et pharetra pharetra. 
                                     Leo in vitae turpis massa.
-                                </TextBlock>
-                            </StackPanel>
-                        </Grid>
+                        </TextBlock>
                     </StackPanel>
-                    <TextBlock FontSize="42" Text="FAQ"/>
-                    <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-                    <Grid Margin="0,0,0,50">
-                        <StackPanel Margin="0,0,10,0">
-                            <controls:Expander Background="Transparent" IsExpanded="False" Margin="0,0,0,30">
-                                <controls:Expander.Header>
-                                    <TextBlock Text="Question: my GPU is making weird noises. Whats wrong?" FontWeight="Bold"/>
-                                </controls:Expander.Header>
-                                <TextBlock TextWrapping="Wrap" Margin="10,0,10,0" Text="Answer: Essentially the easiest reason is because the game you are playing is experiencing too much FPS all at once, therefore the capacitors on your card vibrate, making the sound"/>
-                            </controls:Expander>
-                            <controls:Expander Background="Transparent" IsExpanded="False" Margin="0,0,0,30">
-                                <controls:Expander.Header>
-                                    <TextBlock FontWeight="Bold" Text="Question: can I hotswap certain parts of my computer?"/>
-                                </controls:Expander.Header>
-                                <TextBlock TextWrapping="Wrap" Margin="10,0,10,0" Text="Answer: Yes."/>
-                            </controls:Expander>
-                            <controls:Expander Background="Transparent" IsExpanded="False" Margin="0,0,0,30">
-                                <controls:Expander.Header>
-                                    <TextBlock FontWeight="Bold" Text="Question: my computer is constantly freezing after I try to overclock my GPU, any solutions?"/>
-                                </controls:Expander.Header>
-                                <TextBlock TextWrapping="Wrap" Margin="10,0,10,0" Text="Answer: Yes. You're overloading the cards boundaries of how much it can be overclocked. Try starting the card at its base clocks and slowly increasing the memory clock, core clock, and voltage to a point where something goes wrong, the result before that initial freeze will be the best overclock for your card"/>
-                            </controls:Expander>
-                            <controls:Expander Background="Transparent" IsExpanded="False" Margin="0,0,0,30">
-                                <controls:Expander.Header>
-                                    <TextBlock FontWeight="Bold" Text="Question: would investing in an M.2 SSD be a good idea for games?"/>
-                                </controls:Expander.Header>
-                                <TextBlock TextWrapping="Wrap" Margin="10,0,10,0" Text="Answer: Yes. this reduces the need to use an HDD."/>
-                            </controls:Expander>
-                            <controls:Expander Background="Transparent" IsExpanded="False" Margin="0,0,0,30">
-                                <controls:Expander.Header>
-                                    <TextBlock FontWeight="Bold" Text="Question: I'm making a budget pc that can run games at 60FPS 1080p, would an AMD CPU be good or should I think about using an Intel CPU?"/>
-                                </controls:Expander.Header>
-                                <TextBlock TextWrapping="Wrap" Margin="10,0,10,0" Text="Answer: AMD would be a good idea as it is a cheaper option and you could probably find a good Ryzen CPU for the same price as a i5-8500."/>
-                            </controls:Expander>
-                        </StackPanel>
-                    </Grid>
+                </Grid>
+            </StackPanel>
+            <TextBlock FontSize="42" Text="FAQ"/>
+            <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+            <Grid Margin="0,0,0,50">
+                <StackPanel Margin="0,0,10,0">
+                    <controls:Expander Background="Transparent" IsExpanded="False" Margin="0,0,0,30">
+                        <controls:Expander.Header>
+                            <TextBlock Text="Question: my GPU is making weird noises. Whats wrong?" FontWeight="Bold"/>
+                        </controls:Expander.Header>
+                        <TextBlock TextWrapping="Wrap" Margin="10,0,10,0" Text="Answer: Essentially the easiest reason is because the game you are playing is experiencing too much FPS all at once, therefore the capacitors on your card vibrate, making the sound"/>
+                    </controls:Expander>
+                    <controls:Expander Background="Transparent" IsExpanded="False" Margin="0,0,0,30">
+                        <controls:Expander.Header>
+                            <TextBlock FontWeight="Bold" Text="Question: can I hotswap certain parts of my computer?"/>
+                        </controls:Expander.Header>
+                        <TextBlock TextWrapping="Wrap" Margin="10,0,10,0" Text="Answer: Yes."/>
+                    </controls:Expander>
+                    <controls:Expander Background="Transparent" IsExpanded="False" Margin="0,0,0,30">
+                        <controls:Expander.Header>
+                            <TextBlock FontWeight="Bold" Text="Question: my computer is constantly freezing after I try to overclock my GPU, any solutions?"/>
+                        </controls:Expander.Header>
+                        <TextBlock TextWrapping="Wrap" Margin="10,0,10,0" Text="Answer: Yes. You're overloading the cards boundaries of how much it can be overclocked. Try starting the card at its base clocks and slowly increasing the memory clock, core clock, and voltage to a point where something goes wrong, the result before that initial freeze will be the best overclock for your card"/>
+                    </controls:Expander>
+                    <controls:Expander Background="Transparent" IsExpanded="False" Margin="0,0,0,30">
+                        <controls:Expander.Header>
+                            <TextBlock FontWeight="Bold" Text="Question: would investing in an M.2 SSD be a good idea for games?"/>
+                        </controls:Expander.Header>
+                        <TextBlock TextWrapping="Wrap" Margin="10,0,10,0" Text="Answer: Yes. this reduces the need to use an HDD."/>
+                    </controls:Expander>
+                    <controls:Expander Background="Transparent" IsExpanded="False" Margin="0,0,0,30">
+                        <controls:Expander.Header>
+                            <TextBlock FontWeight="Bold" Text="Question: I'm making a budget pc that can run games at 60FPS 1080p, would an AMD CPU be good or should I think about using an Intel CPU?"/>
+                        </controls:Expander.Header>
+                        <TextBlock TextWrapping="Wrap" Margin="10,0,10,0" Text="Answer: AMD would be a good idea as it is a cheaper option and you could probably find a good Ryzen CPU for the same price as a i5-8500."/>
+                    </controls:Expander>
                 </StackPanel>
-            </ScrollViewer>
-        </Grid>
-
+            </Grid>
+        </StackPanel>
+    </Grid>
 </Page>

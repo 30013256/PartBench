@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <!--Content Area - Margin.Left Expaned View 350 Colapsed View 90-->
+    <!--Content Area-->
     <Grid Background="#3d3d3d">
         <StackPanel>
             <!--Item 1-->

@@ -51,8 +51,7 @@ namespace PartBench
         public async void sel()
         {
             await Task.Delay(10);
-            NavItemHome.IsSelected = true;
-            
+            NavItemHome.IsSelected = true;   
         }
 
         
