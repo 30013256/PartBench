@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PartBench.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,10 +24,13 @@ namespace PartBench
     /// </summary>
     public sealed partial class ForumsPage : Page
     {
+        public List<Forums> Forum;
+
         public ForumsPage()
         {
             this.InitializeComponent();
+            Forum = ForumManager.GetForums();
         }
-        public string Header => "Forums";
+        public string Header => "Forums";     
     }
 }

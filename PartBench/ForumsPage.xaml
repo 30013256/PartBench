@@ -5,6 +5,7 @@
     xmlns:local="using:PartBench"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:PartBench.Models"
     mc:Ignorable="d"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -25,33 +26,47 @@
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                <StackPanel Grid.Column="0">
+                
+                <StackPanel Grid.ColumnSpan="6">
                     <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Forum"/>
-                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Part Selection Opinion Needed"/>
+                    <GridView ItemsSource="{x:Bind Forum}">
+                        <GridView.ItemTemplate>
+                            <DataTemplate x:DataType="data:Forums">
+                                <StackPanel>
+                                    <TextBlock TextAlignment="Left" Text="{x:Bind Title}"/>
+                                    <TextBlock TextAlignment="Left" Text="{x:Bind Title}"/>
+                                    <TextBlock TextAlignment="Left" Text="{x:Bind Title}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridView.ItemTemplate>
+                    </GridView>
+                    
+                       
+                    <!--<TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Part Selection Opinion Needed"/>
                     <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Recommended builds?"/>
                     <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Troubleshooting"/>
-                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Type of Computer"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Type of Computer"/>-->
                 </StackPanel>
                 <StackPanel Grid.Column="1">
                     <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Topics"/>
+                    <!--<TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
                     <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
                     <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
-                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="13245"/>-->
                 </StackPanel>
                 <StackPanel Grid.Column="2">
                     <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Posts"/>
+                    <!--<TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
                     <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
                     <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
-                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="9823"/>-->
                 </StackPanel>
                 <StackPanel Grid.Column="3">
                     <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" FontSize="12" Text="Recent Topic/Post"/>
-                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="1" Text="How does my first build look?"/>
+                    <!--<TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="1" Text="How does my first build look?"/>
                     <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Whats a good budget build?"/>
                     <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Computer won't boot, weird ticking sound in PSU"/>
-                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Graphics Card making noise when experiencing high FPS"/>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center" Text="Graphics Card making noise when experiencing high FPS"/>-->
                 </StackPanel>
             </Grid>
 
