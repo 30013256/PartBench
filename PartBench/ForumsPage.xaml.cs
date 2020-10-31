@@ -25,11 +25,17 @@ namespace PartBench
     public sealed partial class ForumsPage : Page
     {
         public List<Forums> Forum;
+        public List<Forums> Forum2;
+        public List<Forums> Forum3;
+        public List<Forums> Forum4;
 
         public ForumsPage()
         {
             this.InitializeComponent();
             Forum = ForumManager.GetForums();
+            Forum2 = ForumManager.GetForums2();
+            Forum3 = ForumManager.GetForums3();
+            Forum4 = ForumManager.GetForums4();
         }
         public string Header => "Forums";     
     }
