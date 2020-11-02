@@ -20,7 +20,7 @@ namespace PartBench.Models
         {
             var forums = new List<Forums>();
 
-            forums.Add(new Forums { Title = "Part List Opinions Wanted | ", Topics = 93845, Posts = 465523, RecentTopicPosts = " | Gaming setup($2400 - $3000)"});
+            forums.Add(new Forums { Title = "Part List Opinions Wanted", Topics = 93845, Posts = 465523, RecentTopicPosts = "Gaming setup($2400 - $3000)"});
             forums.Add(new Forums { Title = "Creating a Part List", Topics = 24591, Posts = 144876, RecentTopicPosts = "What parts should I consider putting together for a build?" });
             forums.Add(new Forums { Title = "Troubleshooting", Topics = 10562, Posts = 48552, RecentTopicPosts = "Troubling chipset temps" });
             forums.Add(new Forums { Title = "Laptops", Topics = 942, Posts = 5479, RecentTopicPosts = "Looking for a laptop thats relatively okay for gaming as well as casual use for work" });                        

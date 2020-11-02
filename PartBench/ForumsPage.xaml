@@ -13,166 +13,73 @@
     <!--Content Area - Margin.Left Expaned View 350 Colapsed View 90-->
     <Grid Background="#3d3d3d">
         <!--List Of builds-->
-        <StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBlock TextAlignment="Right" TextWrapping="wrap" Grid.Column="0" FontSize="18" Text="All Posts are shown in this format: Title, Topics, Posts, Recent Posts"/>
             <TextBlock Grid.Column="0" FontSize="18" Text="System"/>
             <!--Break Line-->
             <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-            <!--Build Row Content-->
 
+            <!--Listview implementation-->
             <ListView ItemsSource="{x:Bind Forum}">
-                <ListView.HeaderTemplate>
-                    <DataTemplate>
-                        <Grid Padding="12" Background="{ThemeResource SystemBaseLowColor}">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*"/>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="2*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="Forum" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                            <TextBlock Grid.Column="1" Text="Topics" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                            <TextBlock Grid.Column="2" Text="Posts" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                            <TextBlock Grid.Column="3" Text="Recent Post" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                        </Grid>
-                    </DataTemplate>
-                </ListView.HeaderTemplate>
-                
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="data:Forums">
-                        <StackPanel>
-                        <Grid Padding="20">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*"/>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="2*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Column="0" VerticalAlignment="Center" Style="{ThemeResource BaseTextBlockStyle}" Text="{x:Bind Title}" />
-                            <TextBlock Grid.Column="1" VerticalAlignment="Center" Text="{x:Bind Topics}"/>
-                            <TextBlock Grid.Column="2" VerticalAlignment="Center" Text="{x:Bind Posts}"/>
-                            <TextBlock Grid.Column="3" VerticalAlignment="Center" Text="{x:Bind RecentTopicPosts}"/>
-                        </Grid>
+                        <StackPanel Padding="20" AutomationProperties.Name="{x:Bind Title}">
+                            <TextBlock Text="{x:Bind Title}"  Style="{ThemeResource BaseTextBlockStyle}" Margin="0,4,0,0"/>
+                            <TextBlock Text="{x:Bind Topics}" Style="{ThemeResource CaptionTextBlockStyle}" Margin="0,4,0,0"/>
+                            <TextBlock Text="{x:Bind Posts}" Style="{ThemeResource CaptionTextBlockStyle}" Margin="0,4,0,0"/>
+                            <TextBlock Text="{x:Bind RecentTopicPosts}" Style="{ThemeResource CaptionTextBlockStyle}" Margin="0,4,0,0"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
 
             <TextBlock Grid.Column="0" FontSize="18" Text="Hardware"/>
-            <!--Break Line-->
-            <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-            <!--Build Row Content-->
-            <ListView ItemsSource="{x:Bind Forum2}">
-                <ListView.HeaderTemplate>
-                    <DataTemplate>
-                        <Grid Padding="12" Background="{ThemeResource SystemBaseLowColor}">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*"/>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="2*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="Forum" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                            <TextBlock Grid.Column="1" Text="Topics" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                            <TextBlock Grid.Column="2" Text="Posts" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                            <TextBlock Grid.Column="3" Text="Recent Post" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                        </Grid>
-                    </DataTemplate>
-                </ListView.HeaderTemplate>
-
-                <ListView.ItemTemplate >
-                    <DataTemplate x:DataType="data:Forums">
-                        <Grid AutomationProperties.Name="{x:Bind Title}">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Column="0" VerticalAlignment="Center" Style="{ThemeResource BaseTextBlockStyle}" Text="{x:Bind Title}" />
-                            <TextBlock Grid.Column="1" VerticalAlignment="Center" Text="{x:Bind Topics}"/>
-                            <TextBlock Grid.Column="2" VerticalAlignment="Center" Text="{x:Bind Posts}"/>
-                            <TextBlock Grid.Column="3" VerticalAlignment="Center" Text="{x:Bind RecentTopicPosts}"/>
-                        </Grid>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                <!--Break Line-->
+                <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                <!--Build Row Content-->
+                <ListView ItemsSource="{x:Bind Forum2}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="data:Forums">
+                            <StackPanel Padding="20" AutomationProperties.Name="{x:Bind Title}">
+                                <TextBlock Text="{x:Bind Title}"  Style="{ThemeResource BaseTextBlockStyle}" Margin="0,4,0,0"/>
+                                <TextBlock Text="{x:Bind Topics}" Style="{ThemeResource CaptionTextBlockStyle}" Margin="0,4,0,0"/>
+                                <TextBlock Text="{x:Bind Posts}" Style="{ThemeResource CaptionTextBlockStyle}" Margin="0,4,0,0"/>
+                                <TextBlock Text="{x:Bind RecentTopicPosts}" Style="{ThemeResource CaptionTextBlockStyle}" Margin="0,4,0,0"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
 
             <TextBlock Grid.Column="0" FontSize="18" Text="Software"/>
-            <!--Break Line-->
-            <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-            <!--Build Row Content-->
-            <ListView ItemsSource="{x:Bind Forum3}">
-                <ListView.HeaderTemplate>
-                    <DataTemplate>
-                        <Grid Padding="12" Background="{ThemeResource SystemBaseLowColor}">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*"/>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="2*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="Forum" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                            <TextBlock Grid.Column="1" Text="Topics" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                            <TextBlock Grid.Column="2" Text="Posts" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                            <TextBlock Grid.Column="3" Text="Recent Post" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                        </Grid>
-                    </DataTemplate>
-                </ListView.HeaderTemplate>
-
-                <ListView.ItemTemplate >
-                    <DataTemplate x:DataType="data:Forums">
-                        <Grid AutomationProperties.Name="{x:Bind Title}">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Column="0" VerticalAlignment="Center" Style="{ThemeResource BaseTextBlockStyle}" Text="{x:Bind Title}" />
-                            <TextBlock Grid.Column="1" VerticalAlignment="Center" Text="{x:Bind Topics}"/>
-                            <TextBlock Grid.Column="2" VerticalAlignment="Center" Text="{x:Bind Posts}"/>
-                            <TextBlock Grid.Column="3" VerticalAlignment="Center" Text="{x:Bind RecentTopicPosts}"/>
-                        </Grid>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                <!--Break Line-->
+                <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                <!--Build Row Content-->
+                <ListView ItemsSource="{x:Bind Forum3}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="data:Forums">
+                            <StackPanel Padding="20" AutomationProperties.Name="{x:Bind Title}">
+                                <TextBlock Text="{x:Bind Title}"  Style="{ThemeResource BaseTextBlockStyle}" Margin="0,4,0,0"/>
+                                <TextBlock Text="{x:Bind Topics}" Style="{ThemeResource CaptionTextBlockStyle}" Margin="0,4,0,0"/>
+                                <TextBlock Text="{x:Bind Posts}" Style="{ThemeResource CaptionTextBlockStyle}" Margin="0,4,0,0"/>
+                                <TextBlock Text="{x:Bind RecentTopicPosts}" Style="{ThemeResource CaptionTextBlockStyle}" Margin="0,4,0,0"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
 
             <TextBlock Grid.Column="0" FontSize="18" Text="General"/>
-            <!--Break Line-->
-            <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
-            <!--Build Row Content-->
+                <!--Break Line-->
+                <Line Margin="0,8,0,8" X1="99999" Y1="0" StrokeThickness="2" Stroke="White"/>
+                <!--Build Row Content-->
             <ListView ItemsSource="{x:Bind Forum4}">
-                <ListView.HeaderTemplate>
-                    <DataTemplate>
-                        <Grid Padding="12" Background="{ThemeResource SystemBaseLowColor}">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*"/>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="2*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="Forum" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                            <TextBlock Grid.Column="1" Text="Topics" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                            <TextBlock Grid.Column="2" Text="Posts" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                            <TextBlock Grid.Column="3" Text="Recent Post" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                        </Grid>
-                    </DataTemplate>
-                </ListView.HeaderTemplate>
-
-                <ListView.ItemTemplate >
+                <ListView.ItemTemplate>
                     <DataTemplate x:DataType="data:Forums">
-                        <Grid AutomationProperties.Name="{x:Bind Title}">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Column="0" VerticalAlignment="Center" Style="{ThemeResource BaseTextBlockStyle}" Text="{x:Bind Title}" />
-                            <TextBlock Grid.Column="1" VerticalAlignment="Center" Text="{x:Bind Topics}"/>
-                            <TextBlock Grid.Column="2" VerticalAlignment="Center" Text="{x:Bind Posts}"/>
-                            <TextBlock Grid.Column="3" VerticalAlignment="Center" Text="{x:Bind RecentTopicPosts}"/>
-                        </Grid>
+                        <StackPanel Padding="20" AutomationProperties.Name="{x:Bind Title}">
+                            <TextBlock Text="{x:Bind Title}"  Style="{ThemeResource BaseTextBlockStyle}" Margin="0,4,0,0"/>
+                            <TextBlock Text="{x:Bind Topics}" Style="{ThemeResource CaptionTextBlockStyle}" Margin="0,4,0,0"/>
+                            <TextBlock Text="{x:Bind Posts}" Style="{ThemeResource CaptionTextBlockStyle}" Margin="0,4,0,0"/>
+                            <TextBlock Text="{x:Bind RecentTopicPosts}" Style="{ThemeResource CaptionTextBlockStyle}" Margin="0,4,0,0"/>
+                        </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
