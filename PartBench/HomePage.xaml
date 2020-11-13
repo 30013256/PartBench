@@ -18,11 +18,11 @@
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
                 <!--Row 1-->
-                <Grid VerticalAlignment="Top" Grid.Column="0" HorizontalAlignment="Left" >
+                <Grid VerticalAlignment="Top" HorizontalAlignment="Left" >
                     <StackPanel VerticalAlignment="Center">
                         <TextBlock TextWrapping="Wrap" Margin="0,0,0,20" FontSize="50" Text="Build Guides"/>
                         <TextBlock MaxWidth="300" HorizontalAlignment="Left" Margin="0,0,0,20" TextWrapping="Wrap" Text="Building your own PC and need ideas on where to get started? Explore our build guides which cover systems for a variety of use-cases and budgets."/>
-                        <Button x:Name="btnVeiwBuildGuides" Content="Veiw Build Guides" Background="#ffd500" Foreground="Black" Click="btnVeiwBuildGuides_Click"/>
+                        <Button x:Name="btnVeiwBuildGuides" Content="View Build Guides" Background="#ffd500" Foreground="Black" Click="btnVeiwBuildGuides_Click"/>
                     </StackPanel>
                 </Grid>
                 <!--Row 2-->
@@ -51,7 +51,7 @@
                 <!--Row 1-->
                 <Grid VerticalAlignment="Top" Grid.Column="0" HorizontalAlignment="Left" >
                     <StackPanel VerticalAlignment="Center">
-                        <TextBlock Text="Build Your Own Sytem" TextWrapping="Wrap" Margin="0,0,0,20" FontSize="50" />
+                        <TextBlock Text="Build Your Own System" TextWrapping="Wrap" Margin="0,0,0,20" FontSize="50" />
                         <TextBlock MaxWidth="300" HorizontalAlignment="Left" Margin="0,0,0,20" TextWrapping="Wrap" Text="Building your own PC and need ideas on where to get started? Explore our build guides which cover systems for a variety of use-cases and budgets."/>
                         <Button x:Name="btnVeiwBuilds"  Content="View Builds Page" Background="#ffd500" Foreground="Black" Click="btnVeiwBuilds_Click"/>
                     </StackPanel>

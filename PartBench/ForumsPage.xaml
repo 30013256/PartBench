@@ -13,7 +13,7 @@
     <!--Content Area - Margin.Left Expaned View 350 Colapsed View 90-->
     <Grid Background="#3d3d3d">
         <!--List Of builds-->
-        <StackPanel Grid.Column="1">
+        <StackPanel>
             <TextBlock TextAlignment="Right" TextWrapping="wrap" Grid.Column="0" FontSize="18" Text="All Posts are shown in this format: Title, Topics, Posts, Recent Posts"/>
             <TextBlock Grid.Column="0" FontSize="18" Text="System"/>
             <!--Break Line-->
